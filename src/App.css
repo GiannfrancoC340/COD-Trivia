@@ -1,10 +1,3 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 .App {
   min-height: 100vh;
   background: #0a0a0a;
@@ -46,6 +39,12 @@
   border-radius: 8px;
   padding: 1.5rem;
   text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-2px);
+  border-color: #444;
 }
 
 .team-card h3 {
@@ -71,11 +70,16 @@
   border: 2px solid #333;
   border-radius: 8px;
   color: white;
+  transition: border-color 0.3s ease;
 }
 
 .guess-input:focus {
   outline: none;
   border-color: #667eea;
+}
+
+.guess-input::placeholder {
+  color: #666;
 }
 
 .submit-btn {
@@ -85,12 +89,18 @@
   border: none;
   border-radius: 8px;
   font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: transform 0.2s ease, opacity 0.3s ease;
 }
 
 .submit-btn:hover {
   opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
 }
 
 .previous-guesses {
@@ -100,6 +110,7 @@
 .previous-guesses h3 {
   margin-bottom: 1rem;
   color: #aaa;
+  font-size: 1.1rem;
 }
 
 .guess-chip {
@@ -109,6 +120,11 @@
   margin: 0.25rem;
   border-radius: 6px;
   border: 1px solid #444;
+  transition: background 0.2s ease;
+}
+
+.guess-chip:hover {
+  background: #333;
 }
 
 .result-message {
@@ -116,6 +132,18 @@
   padding: 2rem;
   border-radius: 12px;
   margin-top: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .result-message.success {
@@ -126,6 +154,10 @@
 .result-message.failure {
   background: rgba(234, 102, 102, 0.2);
   border: 2px solid #ea6666;
+}
+
+.result-message h2 {
+  margin-bottom: 0.5rem;
 }
 
 .event-prompt {
@@ -154,6 +186,7 @@
 .hints-container h3 {
   margin-bottom: 1rem;
   color: #aaa;
+  font-size: 1.1rem;
 }
 
 .hint {
@@ -162,4 +195,16 @@
   margin-bottom: 0.5rem;
   border-radius: 8px;
   border-left: 4px solid #667eea;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
