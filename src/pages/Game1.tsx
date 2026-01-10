@@ -10,14 +10,18 @@ function Game1() {
   // Mock player data for now
   const mockPlayer: Player = {
     id: '1',
-    ign: 'Scump',
-    realName: 'Seth Abner',
-    nationality: 'USA',
-    role: 'SMG',
-    teams: [
-      { name: 'OpTic Gaming', years: '2011-2024' },
-      { name: 'Envy', years: '2010' },
-    ]
+      ign: 'Scump',
+      realName: 'Seth Abner',
+      nationality: 'USA',
+      role: 'SMG',        
+      teams: [
+          { name: 'OpTic Gaming', years: '2012-2014' },
+          { name: 'Envy', years: '2014' },
+          { name: 'OpTic Gaming', years: '2014-2019' },
+          { name: 'Chicago Huntsmen', years: '2019-2020' },
+          { name: 'OpTic Chicago', years: '2020-2021' },
+          { name: 'OpTic Texas', years: '2021-2023' }
+      ]
   };
 
   const handleGuess = (e: React.FormEvent) => {
