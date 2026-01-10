@@ -1,0 +1,73 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.home-header {
+  margin-bottom: 3rem;
+}
+
+.home-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.game-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.game-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #333;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+  border-color: #667eea;
+}
+
+.game-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.game-card p {
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+.play-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.play-btn:hover {
+  opacity: 0.9;
+}
