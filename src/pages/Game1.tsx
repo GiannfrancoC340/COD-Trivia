@@ -65,7 +65,7 @@ function Game1() {
             className="guess-input"
             autoFocus
           />
-          <button type="submit" className="submit-btn">Guess</button>
+          <button type="submit" className="submit-btn">Submit</button>
         </form>
       )}
 
