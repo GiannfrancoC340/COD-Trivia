@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { Player } from '../types';
 import { players } from '../data/players';
+import Header from '../components/header';
 
 function Game1() {
   const [guesses, setGuesses] = useState<string[]>([]);
@@ -8,12 +9,26 @@ function Game1() {
   const [gameWon, setGameWon] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [currentPlayer, setCurrentPlayer] = useState<Player | null>(null);
+  const [showIncorrect, setShowIncorrect] = useState(false);
 
   // Select a random player when component mounts
-  useEffect(() => {
+  const selectRandomPlayer = () => {
     const randomPlayer = players[Math.floor(Math.random() * players.length)];
     setCurrentPlayer(randomPlayer);
+  };
+
+  useEffect(() => {
+    selectRandomPlayer();
   }, []);
+
+  const handlePlayAgain = () => {
+    setGuesses([]);
+    setCurrentGuess('');
+    setGameWon(false);
+    setGameOver(false);
+    setShowIncorrect(false);
+    selectRandomPlayer();
+  };
 
   const handleGuess = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,8 +42,14 @@ function Game1() {
     if (isCorrect) {
       setGameWon(true);
       setGameOver(true);
-    } else if (guesses.length >= 5) {
-      setGameOver(true);
+    } else {
+      // Show incorrect feedback animation
+      setShowIncorrect(true);
+      setTimeout(() => setShowIncorrect(false), 500);
+      
+      if (guesses.length >= 5) {
+        setGameOver(true);
+      }
     }
     
     setCurrentGuess('');
@@ -36,19 +57,27 @@ function Game1() {
 
   // Show loading state while player is being selected
   if (!currentPlayer) {
-    return <div className="game-container">Loading...</div>;
+    return (
+      <div className="game-container">
+        <div className="loading">Loading...</div>
+      </div>
+    );
   }
 
   const teamsToShow = Math.min(guesses.length + 1, currentPlayer.teams.length);
 
   return (
     <div className="game-container">
-      <h1>Guess the Pro</h1>
+      <Header title="Guess the Pro" />
+      
       <p className="attempts">Attempts: {guesses.length}/6</p>
 
       <div className="teams-display">
         {currentPlayer.teams.slice(0, teamsToShow).map((team, index) => (
-          <div key={index} className="team-card">
+          <div 
+            key={index} 
+            className={`team-card ${index === teamsToShow - 1 && guesses.length > 0 ? 'new-reveal' : ''}`}
+          >
             <h3>{team.name}</h3>
             <p>{team.years}</p>
           </div>
@@ -62,7 +91,7 @@ function Game1() {
             value={currentGuess}
             onChange={(e) => setCurrentGuess(e.target.value)}
             placeholder="Enter player IGN..."
-            className="guess-input"
+            className={`guess-input ${showIncorrect ? 'shake-incorrect' : ''}`}
             autoFocus
           />
           <button type="submit" className="submit-btn">Guess</button>
@@ -72,23 +101,43 @@ function Game1() {
       {guesses.length > 0 && (
         <div className="previous-guesses">
           <h3>Previous Guesses:</h3>
-          {guesses.map((guess, index) => (
-            <span key={index} className="guess-chip">{guess}</span>
-          ))}
+          <div className="guesses-list">
+            {guesses.map((guess, index) => (
+              <span key={index} className="guess-chip incorrect">
+                {guess} ✗
+              </span>
+            ))}
+          </div>
         </div>
       )}
 
       {gameWon && (
         <div className="result-message success">
           <h2>🎉 Correct!</h2>
-          <p>You guessed {currentPlayer.ign} in {guesses.length} attempts!</p>
+          <p>You guessed <strong>{currentPlayer.ign}</strong> in {guesses.length} {guesses.length === 1 ? 'attempt' : 'attempts'}!</p>
+          <p className="player-info">{currentPlayer.realName} • {currentPlayer.nationality} • {currentPlayer.role}</p>
+          <button onClick={handlePlayAgain} className="play-again-btn">
+            Play Again
+          </button>
         </div>
       )}
 
       {gameOver && !gameWon && (
         <div className="result-message failure">
           <h2>Game Over</h2>
-          <p>The answer was: {currentPlayer.ign}</p>
+          <p>The answer was: <strong>{currentPlayer.ign}</strong></p>
+          <p className="player-info">{currentPlayer.realName} • {currentPlayer.nationality} • {currentPlayer.role}</p>
+          <div className="all-teams">
+            <h3>Full Team History:</h3>
+            {currentPlayer.teams.map((team, index) => (
+              <div key={index} className="team-reveal">
+                {team.name} ({team.years})
+              </div>
+            ))}
+          </div>
+          <button onClick={handlePlayAgain} className="play-again-btn">
+            Play Again
+          </button>
         </div>
       )}
     </div>
