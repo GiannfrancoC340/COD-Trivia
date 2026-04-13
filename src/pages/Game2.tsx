@@ -1,67 +1,90 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { Event } from '../types';
+import { events } from '../data/events';
+import Header from '../components/header';
 
 function Game2() {
   const [guess, setGuess] = useState('');
-  const [hintsRevealed, setHintsRevealed] = useState(0);
+  const [guesses, setGuesses] = useState<string[]>([]);
   const [gameWon, setGameWon] = useState(false);
   const [gameOver, setGameOver] = useState(false);
+  const [currentEvent, setCurrentEvent] = useState<Event | null>(null);
+  const [showIncorrect, setShowIncorrect] = useState(false);
 
-  // Mock event data
-  const mockEvent: Event = {
-    id: '1',
-    name: 'CoD Champs',
-    year: 2019,
-    codTitle: 'Black Ops 4',
-    winner: 'Simp',
-    team: 'eUnited',
-    hints: [
-      'This player was a rookie',
-      'They played SMG',
-      'Won MVP at the event'
-    ]
+  const MAX_ATTEMPTS = 6;
+
+  // Select a random event when component mounts
+  const selectRandomEvent = () => {
+    const randomEvent = events[Math.floor(Math.random() * events.length)];
+    setCurrentEvent(randomEvent);
+  };
+
+  useEffect(() => {
+    selectRandomEvent();
+  }, []);
+
+  const handlePlayAgain = () => {
+    setGuess('');
+    setGuesses([]);
+    setGameWon(false);
+    setGameOver(false);
+    setShowIncorrect(false);
+    selectRandomEvent();
+  };
+
+  const checkAnswer = (userGuess: string, event: Event): boolean => {
+    const normalizedGuess = userGuess.toLowerCase().trim();
+    return event.acceptedAnswers.some(answer => 
+      normalizedGuess === answer.toLowerCase()
+    );
   };
 
   const handleGuess = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!guess.trim() || gameOver) return;
+    if (!guess.trim() || gameOver || !currentEvent) return;
 
-    const isCorrect = guess.toLowerCase() === mockEvent.winner.toLowerCase();
+    const isCorrect = checkAnswer(guess, currentEvent);
+    
+    setGuesses([...guesses, guess]);
     
     if (isCorrect) {
       setGameWon(true);
       setGameOver(true);
-    } else if (hintsRevealed >= (mockEvent.hints?.length || 0)) {
-      setGameOver(true);
     } else {
-      setHintsRevealed(hintsRevealed + 1);
+      // Show incorrect feedback animation
+      setShowIncorrect(true);
+      setTimeout(() => setShowIncorrect(false), 500);
+
+      if (guesses.length >= MAX_ATTEMPTS - 1) {
+        setGameOver(true);
+      }
     }
     
     setGuess('');
   };
 
+  // Show loading state while event is being selected
+  if (!currentEvent) {
+    return (
+      <div className="game-container">
+        <div className="loading">Loading...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="game-container">
-      <h1>Championship Memory</h1>
+      <Header title="Championship Memory" />
+      
+      <p className="attempts">Attempts: {guesses.length}/{MAX_ATTEMPTS}</p>
       
       <div className="event-prompt">
-        <h2>Who won {mockEvent.name}?</h2>
+        <h2>Which team won {currentEvent.name}?</h2>
         <p className="event-details">
-          {mockEvent.codTitle} • {mockEvent.year}
+          {currentEvent.codTitle} • {currentEvent.year}
         </p>
       </div>
-
-      {hintsRevealed > 0 && mockEvent.hints && (
-        <div className="hints-container">
-          <h3>Hints:</h3>
-          {mockEvent.hints.slice(0, hintsRevealed).map((hint, index) => (
-            <div key={index} className="hint">
-              💡 {hint}
-            </div>
-          ))}
-        </div>
-      )}
 
       {!gameOver && (
         <form onSubmit={handleGuess} className="guess-form">
@@ -69,25 +92,56 @@ function Game2() {
             type="text"
             value={guess}
             onChange={(e) => setGuess(e.target.value)}
-            placeholder="Enter player IGN..."
-            className="guess-input"
+            placeholder="Enter team name..."
+            className={`guess-input ${showIncorrect ? 'shake-incorrect' : ''}`}
             autoFocus
           />
           <button type="submit" className="submit-btn">Submit</button>
         </form>
       )}
 
+      {guesses.length > 0 && (
+        <div className="previous-guesses">
+          <h3>Previous Guesses:</h3>
+          <div className="guesses-list">
+            {guesses.map((g, index) => (
+              <span key={index} className="guess-chip incorrect">
+                {g} ✗
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
       {gameWon && (
         <div className="result-message success">
           <h2>🏆 Correct!</h2>
-          <p>{mockEvent.winner} ({mockEvent.team}) won {mockEvent.name} {mockEvent.year}!</p>
+          <p><strong>{currentEvent.winningTeam}</strong> won {currentEvent.name}!</p>
+          <p className="event-subtitle">{currentEvent.codTitle} • {currentEvent.year}</p>
+          {guesses.length === 1 ? (
+            <p className="perfect-guess">🔥 Perfect! First guess!</p>
+          ) : (
+            <p>You got it in {guesses.length} {guesses.length === 1 ? 'attempt' : 'attempts'}!</p>
+          )}
+          <button onClick={handlePlayAgain} className="play-again-btn">
+            Play Again
+          </button>
         </div>
       )}
 
       {gameOver && !gameWon && (
         <div className="result-message failure">
           <h2>Game Over</h2>
-          <p>The answer was: {mockEvent.winner} ({mockEvent.team})</p>
+          <p>The answer was: <strong>{currentEvent.winningTeam}</strong></p>
+          <p className="event-subtitle">{currentEvent.codTitle} • {currentEvent.year}</p>
+          
+          <div className="accepted-answers-info">
+            <p className="hint-text">Accepted answers included: {currentEvent.acceptedAnswers.slice(0, 3).join(', ')}</p>
+          </div>
+          
+          <button onClick={handlePlayAgain} className="play-again-btn">
+            Play Again
+          </button>
         </div>
       )}
     </div>

@@ -20,9 +20,8 @@ export interface Event {
   name: string;
   year: number;
   codTitle: string;
-  winner: string; // player IGN
-  team: string;
-  hints?: string[];
+  winningTeam: string;        // Changed from 'winner' and 'team'
+  acceptedAnswers: string[];  // Array of valid answers (OpTic, OpTic Texas, OPT, etc.)
 }
 
 // Game state types
