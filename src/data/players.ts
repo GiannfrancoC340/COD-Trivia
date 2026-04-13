@@ -700,4 +700,236 @@ export const players: Player[] = [
             { name: 'Boston Breach', years: '2026-2026' }
         ]
     },
+
+    // BO6 season
+    {
+        id: '56',
+        ign: 'Owakening',
+        realName: 'Joseph Conley',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Florida Mutineers', years: '2020-2022'},
+            { name: 'Boston Breach', years: '2022-2023'},
+            { name: 'Minnesota ROKKR', years: '2023-2024'},
+            { name: 'Boston Breach', years: '2024-2025' }
+        ]
+    },
+    {
+        id: '57',
+        ign: 'Lynz',
+        realName: 'Thomas Gregorio',
+        nationality: 'France',
+        role: 'SMG',
+        teams: [
+            { name: 'Minnesota ROKKR', years: '2023-2024'},
+            { name: 'Los Angeles Guerrillas M8', years: '2024-2025' }
+        ]
+    },
+    {
+        id: '58',
+        ign: 'Priestahh',
+        realName: 'Preston Greiner',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Atlanta FaZe', years: '2019-2020'},
+            { name: 'Minnesota ROKKR', years: '2020-2022'},
+            { name: 'New York Subliners', years: '2022-2023'},
+            { name: 'Boston Breach', years: '2023-2024'},
+            { name: 'Los Angeles Guerrillas M8', years: '2024-2025' },
+            { name: 'Las Vegas Falcons', years: '2025-2025'}
+        ]
+    },
+    {
+        id: '59',
+        ign: 'Attach',
+        realName: 'Dillon Price',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'New York Subliners', years: '2019-2020'},
+            { name: 'Minnesota ROKKR', years: '2020-2023'},
+            { name: 'Las Vegas Legion', years: '2023-2024'},
+            { name: 'Cloud9 New York', years: '2024-2025' }
+        ]
+    },
+    {
+        id: '60',
+        ign: 'Gio',
+        realName: 'Giovanni Webster',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Las Vegas Legion', years: '2024-2024'},
+            { name: 'Minnesota ROKKR', years: '2024-2025'}
+        ]
+    },
+    {
+        id: '61',
+        ign: 'PaulEhx',
+        realName: 'Paul Avila',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'London Royal Ravens', years: '2021-2021'},
+            { name: 'New York Subliners', years: '2022-2022'},
+            { name: 'London Royal Ravens', years: '2022-2023'},
+            { name: 'Minnesota ROKKR', years: '2024-2025'}
+        ]
+    },
+    {
+        id: '62',
+        ign: 'Lucky',
+        realName: 'Alejandro Lopez',
+        nationality: 'Spain',
+        role: 'AR',
+        teams: [
+            { name: 'Toronto Ultra', years: '2019-2020'},
+            { name: 'Miami Heretics', years: '2023-2025' }
+        ]
+    },
+    {
+        id: '63',
+        ign: 'Hicksy',
+        realName: 'Charlie Hicks',
+        nationality: 'UK',
+        role: 'SMG',
+        teams: [
+            { name: 'Toronto Ultra', years: '2022-2023'},
+            { name: 'Vancouver Surge', years: '2024-2025'},
+        ]
+    },
+    {
+        id: '64',
+        ign: 'Roxas',
+        realName: 'Salman Alkhuzayyim',
+        nationality: 'Saudi Arabia',
+        role: 'AR',
+        teams: [
+            { name: 'Las Vegas Falcons', years: '2024-2025'},
+        ]
+    },
+    {
+        id: '65',
+        ign: 'KingAbody',
+        realName: 'Abdulelah Alrajhi',
+        nationality: 'Saudi Arabia',
+        role: 'AR',
+        teams: [
+            { name: 'Las Vegas Falcons', years: '2024-2025'},
+        ]
+    },
+    {
+        id: '66',
+        ign: 'Khhx',
+        realName: 'Khalid Almadhi',
+        nationality: 'Saudi Arabia',
+        role: 'SMG',
+        teams: [
+            { name: 'Las Vegas Falcons', years: '2024-2025'},
+        ]
+    },
+    {
+        id: '67',
+        ign: 'd7oom',
+        realName: 'Abdulrahman Althunayan',
+        nationality: 'Saudi Arabia',
+        role: 'AR',
+        teams: [
+            { name: 'Las Vegas Falcons', years: '2024-2025'},
+        ]
+    },
+    {
+        id: '68',
+        ign: 'KiinG',
+        realName: 'Khalid Kaabi',
+        nationality: 'Saudi Arabia',
+        role: 'SMG',
+        teams: [
+            { name: 'Las Vegas Falcons', years: '2024-2025'},
+        ]
+    },
+    {
+        id: '69',
+        ign: 'KiinG',
+        realName: 'Khalid Kaabi',
+        nationality: 'Saudi Arabia',
+        role: 'SMG',
+        teams: [
+            { name: 'Las Vegas Falcons', years: '2024-2025'},
+        ]
+    },
+    {
+        id: '70',
+        ign: 'WXSL',
+        realName: 'Fahad Alkahtani',
+        nationality: 'Saudi Arabia',
+        role: 'AR',
+        teams: [
+            { name: 'Las Vegas Falcons', years: '2024-2025'},
+        ]
+    },
+    {
+        id: '71',
+        ign: 'Arcitys',
+        realName: 'Alec Sanderson',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Chicago Huntsmen', years: '2019-2020'},
+            { name: 'Atlanta FaZe', years: '2020-2022'},
+            { name: 'Los Angeles Guerrillas', years: '2022-2023'},
+            { name: 'Seattle Surge', years: '2023-2024'},
+            { name: 'Las Vegas Falcons', years: '2025-2025'},
+        ]
+    },
+    {
+        id: '72',
+        ign: 'FeLo',
+        realName: 'Tyler Johnson',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Dallas Empire', years: '2021-2021'},
+            { name: 'Paris Legion', years: '2021-2022'},
+            { name: 'Florida Mutineers', years: '2023-2023'},
+            { name: 'Carolina Royal Ravens', years: '2024-2024'},
+            { name: 'Los Angeles Guerrillas M8', years: '2025-2025'},
+        ]
+    },
+    {
+        id: '73',
+        ign: 'oJohnny',
+        realName: 'Giancarlos Carrasco',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Paris Legion', years: '2022-2022'},
+            { name: 'Las Vegas Legion', years: '2024-2024'},
+            { name: 'Los Angeles Guerrillas M8', years: '2025-2025'},
+        ]
+    },
+    {
+        id: '74',
+        ign: 'oJohnny',
+        realName: 'Giancarlos Carrasco',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Paris Legion', years: '2022-2022'},
+            { name: 'Las Vegas Legion', years: '2024-2024'},
+            { name: 'Los Angeles Guerrillas M8', years: '2025-2025'},
+        ]
+    },
+    {
+        id: '75',
+        ign: 'Wrecks',
+        realName: 'Dillon Slotter',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Carolina Royal Ravens', years: '2025-2025'},
+        ]
+    },
 ]
