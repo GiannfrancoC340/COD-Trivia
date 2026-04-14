@@ -177,4 +177,112 @@ export const events: Event[] = [
     winningTeam: 'FaZe Vegas',
     acceptedAnswers: ['vegas faze', 'faze', 'vegas', 'vgs', 'faze vegas']
   },
+
+  // 2021-2022 Vanguard Season
+  {
+    id: '21',
+    name: 'Kickoff Classic',
+    year: 2022,
+    codTitle: 'Vanguard',
+    winningTeam: 'Toronto Ultra',
+    acceptedAnswers: ['toronto ultra', 'ultra', 'tor', 'toronto']
+  },
+  {
+    id: '22',
+    name: 'Major 1',
+    year: 2022,
+    codTitle: 'Vanguard',
+    winningTeam: 'OpTic Texas',
+    acceptedAnswers: ['optic texas', 'optic', 'tex', 'texas', 'texas optic']
+  },
+  {
+    id: '23',
+    name: 'Major 2',
+    year: 2022,
+    codTitle: 'Vanguard',
+    winningTeam: 'Los Angeles Guerrillas',
+    acceptedAnswers: ['los angeles guerrillas', 'guerrillas', 'lag', 'la guerrillas', 'la', 'los angeles']
+  },
+  {
+    id: '24',
+    name: 'Pro-Am Classic',
+    year: 2022,
+    codTitle: 'Vanguard',
+    winningTeam: 'New York Subliners',
+    acceptedAnswers: ['new york subliners', 'subliners', 'NY', 'NYSL', 'new york', 'ny subliners']
+  },
+  {
+    id: '25',
+    name: 'Major 3',
+    year: 2022,
+    codTitle: 'Vanguard',
+    winningTeam: 'Seattle Surge',
+    acceptedAnswers: ['seattle surge', 'surge', 'SEA', 'seattle']
+  },
+  {
+    id: '26',
+    name: 'Major 4',
+    year: 2022,
+    codTitle: 'Vanguard',
+    winningTeam: 'Los Angeles Thieves',
+    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves', 'la', 'los angeles']
+  },
+  {
+    id: '27',
+    name: 'Champs',
+    year: 2022,
+    codTitle: 'Vanguard',
+    winningTeam: 'Los Angeles Thieves',
+    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves', 'la', 'los angeles']
+  },
+
+  // 2020-2021 Cold War Season
+  {
+    id: '28',
+    name: 'Major 1',
+    year: 2021,
+    codTitle: 'Cold War',
+    winningTeam: 'Atlanta FaZe',
+    acceptedAnswers: ['atlanta faze', 'faze', 'atlanta', 'atl']
+  },
+  {
+    id: '29',
+    name: 'Major 2',
+    year: 2021,
+    codTitle: 'Cold War',
+    winningTeam: 'Toronto Ultra',
+    acceptedAnswers: ['toronto ultra', 'ultra', 'tor', 'toronto']
+  },
+  {
+    id: '30',
+    name: 'Major 3',
+    year: 2021,
+    codTitle: 'Cold War',
+    winningTeam: 'Atlanta FaZe',
+    acceptedAnswers: ['atlanta faze', 'faze', 'atlanta', 'atl']
+  },
+  {
+    id: '31',
+    name: 'Major 4',
+    year: 2021,
+    codTitle: 'Cold War',
+    winningTeam: 'Atlanta FaZe',
+    acceptedAnswers: ['atlanta faze', 'faze', 'atlanta', 'atl']
+  },
+  {
+    id: '32',
+    name: 'Major 5',
+    year: 2021,
+    codTitle: 'Cold War',
+    winningTeam: 'Minnesota ROKKR',
+    acceptedAnswers: ['minnesota rokkr', 'rokkr', 'minnesota', 'min', 'Rokkr']
+  },
+  {
+    id: '33',
+    name: 'Champs',
+    year: 2021,
+    codTitle: 'Cold War',
+    winningTeam: 'Atlanta FaZe',
+    acceptedAnswers: ['atlanta faze', 'faze', 'atlanta', 'atl']
+  },
 ];
