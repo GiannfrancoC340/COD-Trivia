@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import type { Player } from '../types';
 import { players } from '../data/players';
 import Header from '../components/Header';
+import Toast from '../components/Toast';
+import { updateStats, loadStats, getWinToastMessage } from '../utils/stats';
 
 function Game1() {
   const [guesses, setGuesses] = useState<string[]>([]);
@@ -10,6 +12,8 @@ function Game1() {
   const [gameOver, setGameOver] = useState(false);
   const [currentPlayer, setCurrentPlayer] = useState<Player | null>(null);
   const [showIncorrect, setShowIncorrect] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -73,6 +77,7 @@ function Game1() {
     setGameWon(false);
     setGameOver(false);
     setShowIncorrect(false);
+    setShowToast(false);
     setSuggestions([]);
     setShowSuggestions(false);
     selectRandomPlayer();
@@ -90,13 +95,18 @@ function Game1() {
     setGuesses([...guesses, currentGuess]);
 
     if (isCorrect) {
+      updateStats('game1-stats', true);
+      const streak = loadStats('game1-stats').currentStreak;
+      setToastMessage(getWinToastMessage(streak));
       setGameWon(true);
       setGameOver(true);
+      setShowToast(true);
     } else {
       setShowIncorrect(true);
       setTimeout(() => setShowIncorrect(false), 500);
 
       if (guesses.length >= 5) {
+        updateStats('game1-stats', false);
         setGameOver(true);
       }
     }
@@ -116,6 +126,11 @@ function Game1() {
 
   return (
     <div className="game-container">
+      <Toast
+        message={toastMessage}
+        show={showToast}
+        onHide={() => setShowToast(false)}
+      />
       <Header title="Guess the Pro" />
 
       <p className="attempts">Attempts: {guesses.length}/6</p>

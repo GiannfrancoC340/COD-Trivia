@@ -71,3 +71,25 @@
 .play-btn:hover {
   opacity: 0.9;
 }
+
+.stats-link-container {
+  margin-top: 3rem;
+}
+
+.stats-link {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #1a1a1a;
+  color: #aaa;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.stats-link:hover {
+  border-color: #667eea;
+  color: white;
+  background: #2a2a2a;
+}

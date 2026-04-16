@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import type { Event } from '../types';
 import { events } from '../data/events';
 import Header from '../components/Header';
+import Toast from '../components/Toast';
+import { updateStats, loadStats, getWinToastMessage } from '../utils/stats';
 
 function Game2() {
   const [guess, setGuess] = useState('');
@@ -10,6 +12,8 @@ function Game2() {
   const [gameOver, setGameOver] = useState(false);
   const [currentEvent, setCurrentEvent] = useState<Event | null>(null);
   const [showIncorrect, setShowIncorrect] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
 
   const MAX_ATTEMPTS = 6;
 
@@ -29,6 +33,7 @@ function Game2() {
     setGameWon(false);
     setGameOver(false);
     setShowIncorrect(false);
+    setShowToast(false);
     selectRandomEvent();
   };
 
@@ -49,14 +54,18 @@ function Game2() {
     setGuesses([...guesses, guess]);
     
     if (isCorrect) {
+      updateStats('game2-stats', true);
+      const streak = loadStats('game2-stats').currentStreak;
+      setToastMessage(getWinToastMessage(streak));
       setGameWon(true);
       setGameOver(true);
+      setShowToast(true);
     } else {
-      // Show incorrect feedback animation
       setShowIncorrect(true);
       setTimeout(() => setShowIncorrect(false), 500);
 
       if (guesses.length >= MAX_ATTEMPTS - 1) {
+        updateStats('game2-stats', false);
         setGameOver(true);
       }
     }
@@ -75,6 +84,11 @@ function Game2() {
 
   return (
     <div className="game-container">
+      <Toast
+        message={toastMessage}
+        show={showToast}
+        onHide={() => setShowToast(false)}
+      />
       <Header title="Championship Memory" />
       
       <p className="attempts">Attempts: {guesses.length}/{MAX_ATTEMPTS}</p>

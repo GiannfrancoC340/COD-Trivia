@@ -22,6 +22,10 @@ function Home() {
                     <button className="play-btn">Play Now</button>
                 </Link>
             </div>
+
+            <div className="stats-link-container">
+                <Link to="/stats" className="stats-link">View Statistics</Link>
+            </div>
         </div>
     );
 }
