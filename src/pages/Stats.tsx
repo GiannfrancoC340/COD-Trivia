@@ -27,6 +27,8 @@ function GameStatsSection({ title, storageKey }: { title: string; storageKey: st
       <h2>{title}</h2>
       <div className="stats-grid">
         <StatCard label="Played" value={stats.played} />
+        <StatCard label="Wins" value={stats.wins} />
+        <StatCard label="Losses" value={stats.played - stats.wins} />
         <StatCard label="Win %" value={`${winPercent(stats)}%`} />
         <StatCard label="Current Streak" value={stats.currentStreak} />
         <StatCard label="Max Streak" value={stats.maxStreak} />

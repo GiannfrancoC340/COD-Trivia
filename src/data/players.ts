@@ -911,18 +911,6 @@ export const players: Player[] = [
         ]
     },
     {
-        id: '74',
-        ign: 'oJohnny',
-        realName: 'Giancarlos Carrasco',
-        nationality: 'USA',
-        role: 'SMG',
-        teams: [
-            { name: 'Paris Legion', years: '2022-2022'},
-            { name: 'Las Vegas Legion', years: '2024-2024'},
-            { name: 'Los Angeles Guerrillas M8', years: '2025-2025'},
-        ]
-    },
-    {
         id: '75',
         ign: 'Wrecks',
         realName: 'Dillon Slotter',
