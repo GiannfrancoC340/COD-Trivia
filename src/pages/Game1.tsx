@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import type { Player } from '../types';
 import { players } from '../data/players';
-import Header from '../components/header';
+import Header from '../components/Header';
 
 function Game1() {
   const [guesses, setGuesses] = useState<string[]>([]);
@@ -10,8 +10,11 @@ function Game1() {
   const [gameOver, setGameOver] = useState(false);
   const [currentPlayer, setCurrentPlayer] = useState<Player | null>(null);
   const [showIncorrect, setShowIncorrect] = useState(false);
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const suggestionsRef = useRef<HTMLUListElement>(null);
 
-  // Select a random player when component mounts
   const selectRandomPlayer = () => {
     const randomPlayer = players[Math.floor(Math.random() * players.length)];
     setCurrentPlayer(randomPlayer);
@@ -21,41 +24,86 @@ function Game1() {
     selectRandomPlayer();
   }, []);
 
+  // Close suggestions when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        suggestionsRef.current &&
+        !suggestionsRef.current.contains(e.target as Node) &&
+        inputRef.current &&
+        !inputRef.current.contains(e.target as Node)
+      ) {
+        setShowSuggestions(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setCurrentGuess(value);
+
+    if (value.trim().length > 0) {
+      const alreadyGuessed = guesses.map(g => g.toLowerCase());
+      const filtered = players
+        .map(p => p.ign)
+        .filter(
+          ign =>
+            ign.toLowerCase().includes(value.toLowerCase()) &&
+            !alreadyGuessed.includes(ign.toLowerCase())
+        );
+      setSuggestions(filtered);
+      setShowSuggestions(filtered.length > 0);
+    } else {
+      setSuggestions([]);
+      setShowSuggestions(false);
+    }
+  };
+
+  const handleSuggestionClick = (ign: string) => {
+    setCurrentGuess(ign);
+    setShowSuggestions(false);
+    inputRef.current?.focus();
+  };
+
   const handlePlayAgain = () => {
     setGuesses([]);
     setCurrentGuess('');
     setGameWon(false);
     setGameOver(false);
     setShowIncorrect(false);
+    setSuggestions([]);
+    setShowSuggestions(false);
     selectRandomPlayer();
   };
 
   const handleGuess = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!currentGuess.trim() || gameOver || !currentPlayer) return;
 
+    setShowSuggestions(false);
+
     const isCorrect = currentGuess.toLowerCase() === currentPlayer.ign.toLowerCase();
-    
+
     setGuesses([...guesses, currentGuess]);
-    
+
     if (isCorrect) {
       setGameWon(true);
       setGameOver(true);
     } else {
-      // Show incorrect feedback animation
       setShowIncorrect(true);
       setTimeout(() => setShowIncorrect(false), 500);
-      
+
       if (guesses.length >= 5) {
         setGameOver(true);
       }
     }
-    
+
     setCurrentGuess('');
   };
 
-  // Show loading state while player is being selected
   if (!currentPlayer) {
     return (
       <div className="game-container">
@@ -69,13 +117,13 @@ function Game1() {
   return (
     <div className="game-container">
       <Header title="Guess the Pro" />
-      
+
       <p className="attempts">Attempts: {guesses.length}/6</p>
 
       <div className="teams-display">
         {currentPlayer.teams.slice(0, teamsToShow).map((team, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className={`team-card ${index === teamsToShow - 1 && guesses.length > 0 ? 'new-reveal' : ''}`}
           >
             <h3>{team.name}</h3>
@@ -86,14 +134,34 @@ function Game1() {
 
       {!gameOver && (
         <form onSubmit={handleGuess} className="guess-form">
-          <input
-            type="text"
-            value={currentGuess}
-            onChange={(e) => setCurrentGuess(e.target.value)}
-            placeholder="Enter player IGN..."
-            className={`guess-input ${showIncorrect ? 'shake-incorrect' : ''}`}
-            autoFocus
-          />
+          <div className="autocomplete-wrapper">
+            <input
+              ref={inputRef}
+              type="text"
+              value={currentGuess}
+              onChange={handleInputChange}
+              onFocus={() => {
+                if (suggestions.length > 0) setShowSuggestions(true);
+              }}
+              placeholder="Enter player IGN..."
+              className={`guess-input ${showIncorrect ? 'shake-incorrect' : ''}`}
+              autoComplete="off"
+              autoFocus
+            />
+            {showSuggestions && (
+              <ul className="suggestions-list" ref={suggestionsRef}>
+                {suggestions.map((ign) => (
+                  <li
+                    key={ign}
+                    className="suggestion-item"
+                    onMouseDown={() => handleSuggestionClick(ign)}
+                  >
+                    {ign}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
           <button type="submit" className="submit-btn">Guess</button>
         </form>
       )}

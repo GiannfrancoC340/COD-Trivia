@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { Event } from '../types';
 import { events } from '../data/events';
-import Header from '../components/header';
+import Header from '../components/Header';
 
 function Game2() {
   const [guess, setGuess] = useState('');
