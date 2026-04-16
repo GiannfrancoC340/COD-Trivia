@@ -4,6 +4,7 @@ import { events } from '../data/events';
 import Header from '../components/Header';
 import Toast from '../components/Toast';
 import { updateStats, loadStats, getWinToastMessage } from '../utils/stats';
+import { copyToClipboard, generateGame2ShareText } from '../utils/share';
 
 function Game2() {
   const [guess, setGuess] = useState('');
@@ -14,6 +15,7 @@ function Game2() {
   const [showIncorrect, setShowIncorrect] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
+  const [showCopied, setShowCopied] = useState(false);
 
   const MAX_ATTEMPTS = 6;
 
@@ -34,7 +36,24 @@ function Game2() {
     setGameOver(false);
     setShowIncorrect(false);
     setShowToast(false);
+    setShowCopied(false);
     selectRandomEvent();
+  };
+
+  const handleShare = async () => {
+    if (!currentEvent) return;
+    
+    const shareText = generateGame2ShareText(
+      guesses.length,
+      gameWon
+    );
+    
+    const success = await copyToClipboard(shareText);
+    
+    if (success) {
+      setShowCopied(true);
+      setTimeout(() => setShowCopied(false), 2000);
+    }
   };
 
   const checkAnswer = (userGuess: string, event: Event): boolean => {
@@ -137,9 +156,14 @@ function Game2() {
           ) : (
             <p>You got it in {guesses.length} {guesses.length === 1 ? 'attempt' : 'attempts'}!</p>
           )}
-          <button onClick={handlePlayAgain} className="play-again-btn">
-            Play Again
-          </button>
+          <div className="action-buttons">
+            <button onClick={handleShare} className="share-btn">
+              {showCopied ? '✓ Copied!' : 'Share Results'}
+            </button>
+            <button onClick={handlePlayAgain} className="play-again-btn">
+              Play Again
+            </button>
+          </div>
         </div>
       )}
 
@@ -153,9 +177,14 @@ function Game2() {
             <p className="hint-text">Accepted answers included: {currentEvent.acceptedAnswers.slice(0, 3).join(', ')}</p>
           </div>
           
-          <button onClick={handlePlayAgain} className="play-again-btn">
-            Play Again
-          </button>
+          <div className="action-buttons">
+            <button onClick={handleShare} className="share-btn">
+              {showCopied ? '✓ Copied!' : 'Share Results'}
+            </button>
+            <button onClick={handlePlayAgain} className="play-again-btn">
+              Play Again
+            </button>
+          </div>
         </div>
       )}
     </div>

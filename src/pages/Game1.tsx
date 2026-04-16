@@ -4,6 +4,7 @@ import { players } from '../data/players';
 import Header from '../components/Header';
 import Toast from '../components/Toast';
 import { updateStats, loadStats, getWinToastMessage } from '../utils/stats';
+import { copyToClipboard, generateGame1ShareText } from '../utils/share';
 
 function Game1() {
   const [guesses, setGuesses] = useState<string[]>([]);
@@ -16,6 +17,7 @@ function Game1() {
   const [toastMessage, setToastMessage] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [showCopied, setShowCopied] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLUListElement>(null);
 
@@ -78,9 +80,26 @@ function Game1() {
     setGameOver(false);
     setShowIncorrect(false);
     setShowToast(false);
+    setShowCopied(false);
     setSuggestions([]);
     setShowSuggestions(false);
     selectRandomPlayer();
+  };
+
+  const handleShare = async () => {
+    if (!currentPlayer) return;
+    
+    const shareText = generateGame1ShareText(
+      guesses.length,
+      gameWon
+    );
+    
+    const success = await copyToClipboard(shareText);
+    
+    if (success) {
+      setShowCopied(true);
+      setTimeout(() => setShowCopied(false), 2000);
+    }
   };
 
   const handleGuess = (e: React.FormEvent) => {
@@ -199,9 +218,14 @@ function Game1() {
           <h2>🎉 Correct!</h2>
           <p>You guessed <strong>{currentPlayer.ign}</strong> in {guesses.length} {guesses.length === 1 ? 'attempt' : 'attempts'}!</p>
           <p className="player-info">{currentPlayer.realName} • {currentPlayer.nationality} • {currentPlayer.role}</p>
-          <button onClick={handlePlayAgain} className="play-again-btn">
-            Play Again
-          </button>
+          <div className="action-buttons">
+            <button onClick={handleShare} className="share-btn">
+              {showCopied ? '✓ Copied!' : 'Share Results'}
+            </button>
+            <button onClick={handlePlayAgain} className="play-again-btn">
+              Play Again
+            </button>
+          </div>
         </div>
       )}
 
@@ -218,9 +242,14 @@ function Game1() {
               </div>
             ))}
           </div>
-          <button onClick={handlePlayAgain} className="play-again-btn">
-            Play Again
-          </button>
+          <div className="action-buttons">
+            <button onClick={handleShare} className="share-btn">
+              {showCopied ? '✓ Copied!' : 'Share Results'}
+            </button>
+            <button onClick={handlePlayAgain} className="play-again-btn">
+              Play Again
+            </button>
+          </div>
         </div>
       )}
     </div>
