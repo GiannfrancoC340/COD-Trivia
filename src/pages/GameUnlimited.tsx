@@ -1,14 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import type { Player } from '../types';
 import { players } from '../data/players';
 import Header from '../components/Header';
 import Toast from '../components/Toast';
 import { updateStats, loadStats, getWinToastMessage } from '../utils/stats';
-import { getDailyPlayer, getDailyGameState, saveDailyGameState } from '../utils/dailyPuzzle';
+import { getRandomPlayer } from '../utils/dailyPuzzle';
 import { copyToClipboard, generateGame1ShareText } from '../utils/share';
 
-function Game1() {
+function GameUnlimited() {
   const [guesses, setGuesses] = useState<string[]>([]);
   const [currentGuess, setCurrentGuess] = useState('');
   const [gameWon, setGameWon] = useState(false);
@@ -20,44 +19,11 @@ function Game1() {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [showCopied, setShowCopied] = useState(false);
-  const [countdown, setCountdown] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    const dailyPlayer = getDailyPlayer();
-    const state = getDailyGameState();
-
-    if (state) {
-      const storedPlayer = players.find(p => p.id === state.playerId) ?? dailyPlayer;
-      setCurrentPlayer(storedPlayer);
-      setGuesses(state.guesses);
-      if (state.completed) {
-        setGameOver(true);
-        setGameWon(state.won);
-      }
-    } else {
-      setCurrentPlayer(dailyPlayer);
-    }
-  }, []);
-
-  // Countdown to midnight
-  useEffect(() => {
-    const tick = () => {
-      const now = new Date();
-      const midnight = new Date();
-      midnight.setHours(24, 0, 0, 0);
-      const diff = midnight.getTime() - now.getTime();
-      const h = Math.floor(diff / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-      setCountdown(
-        `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
-      );
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
+    setCurrentPlayer(getRandomPlayer());
   }, []);
 
   useEffect(() => {
@@ -101,6 +67,19 @@ function Game1() {
     inputRef.current?.focus();
   };
 
+  const handlePlayAgain = () => {
+    setGuesses([]);
+    setCurrentGuess('');
+    setGameWon(false);
+    setGameOver(false);
+    setShowIncorrect(false);
+    setShowToast(false);
+    setShowCopied(false);
+    setSuggestions([]);
+    setShowSuggestions(false);
+    setCurrentPlayer(getRandomPlayer());
+  };
+
   const handleShare = async () => {
     if (!currentPlayer) return;
     const shareText = generateGame1ShareText(guesses.length, gameWon);
@@ -122,19 +101,17 @@ function Game1() {
     setCurrentGuess('');
 
     if (isCorrect) {
-      saveDailyGameState({ completed: true, won: true, guesses: newGuesses, playerId: currentPlayer.id });
-      updateStats('game1-stats', true);
-      const streak = loadStats('game1-stats').currentStreak;
+      updateStats('game1-unlimited-stats', true);
+      const streak = loadStats('game1-unlimited-stats').currentStreak;
       setToastMessage(getWinToastMessage(streak));
       setGameWon(true);
       setGameOver(true);
       setShowToast(true);
     } else {
-      saveDailyGameState({ completed: newGuesses.length >= 6, won: false, guesses: newGuesses, playerId: currentPlayer.id });
       setShowIncorrect(true);
       setTimeout(() => setShowIncorrect(false), 500);
       if (newGuesses.length >= 6) {
-        updateStats('game1-stats', false);
+        updateStats('game1-unlimited-stats', false);
         setGameOver(true);
       }
     }
@@ -153,7 +130,7 @@ function Game1() {
   return (
     <div className="game-container">
       <Toast message={toastMessage} show={showToast} onHide={() => setShowToast(false)} />
-      <Header title="Guess the Pro" />
+      <Header title="Unlimited Mode" />
 
       <p className="attempts">Attempts: {guesses.length}/6</p>
 
@@ -218,13 +195,11 @@ function Game1() {
           <h2>🎉 Correct!</h2>
           <p>You guessed <strong>{currentPlayer.ign}</strong> in {guesses.length} {guesses.length === 1 ? 'attempt' : 'attempts'}!</p>
           <p className="player-info">{currentPlayer.realName} • {currentPlayer.nationality} • {currentPlayer.role}</p>
-          <div className="countdown">Next puzzle in: <strong>{countdown}</strong></div>
           <div className="action-buttons">
             <button onClick={handleShare} className="share-btn">
               {showCopied ? '✓ Copied!' : 'Share Results'}
             </button>
-            <Link to="/stats" className="result-link-btn">View Stats</Link>
-            <Link to="/unlimited" className="result-link-btn">Play Unlimited</Link>
+            <button onClick={handlePlayAgain} className="play-again-btn">Play Again</button>
           </div>
         </div>
       )}
@@ -242,13 +217,11 @@ function Game1() {
               </div>
             ))}
           </div>
-          <div className="countdown">Next puzzle in: <strong>{countdown}</strong></div>
           <div className="action-buttons">
             <button onClick={handleShare} className="share-btn">
               {showCopied ? '✓ Copied!' : 'Share Results'}
             </button>
-            <Link to="/stats" className="result-link-btn">View Stats</Link>
-            <Link to="/unlimited" className="result-link-btn">Play Unlimited</Link>
+            <button onClick={handlePlayAgain} className="play-again-btn">Play Again</button>
           </div>
         </div>
       )}
@@ -256,4 +229,4 @@ function Game1() {
   );
 }
 
-export default Game1;
+export default GameUnlimited;

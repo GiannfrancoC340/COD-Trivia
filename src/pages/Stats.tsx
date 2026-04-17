@@ -45,7 +45,8 @@ function Stats() {
         <h1>Statistics</h1>
       </div>
 
-      <GameStatsSection title="Guess the Pro" storageKey="game1-stats" />
+      <GameStatsSection title="Guess the Pro (Daily)" storageKey="game1-stats" />
+      <GameStatsSection title="Guess the Pro (Unlimited)" storageKey="game1-unlimited-stats" />
       <GameStatsSection title="Championship Memory" storageKey="game2-stats" />
     </div>
   );

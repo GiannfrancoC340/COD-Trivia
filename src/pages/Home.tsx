@@ -21,6 +21,12 @@ function Home() {
                     <p>Guess who won each championship</p>
                     <button className="play-btn">Play Now</button>
                 </Link>
+
+                <Link to="/unlimited" className="game-card">
+                    <h2>Unlimited Mode</h2>
+                    <p>Play as many rounds as you want — random player every time</p>
+                    <button className="play-btn">Play Now</button>
+                </Link>
             </div>
 
             <div className="stats-link-container">
