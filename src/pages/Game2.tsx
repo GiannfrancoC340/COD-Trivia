@@ -137,11 +137,14 @@ function Game2() {
         <div className="previous-guesses">
           <h3>Previous Guesses:</h3>
           <div className="guesses-list">
-            {guesses.map((g, index) => (
-              <span key={index} className="guess-chip incorrect">
-                {g} ✗
-              </span>
-            ))}
+            {guesses.map((g, index) => {
+              const isWinningGuess = gameWon && index === guesses.length - 1;
+              return (
+                <span key={index} className={`guess-chip ${isWinningGuess ? 'correct' : 'incorrect'}`}>
+                  {g} {isWinningGuess ? '✓' : '✗'}
+                </span>
+              );
+            })}
           </div>
         </div>
       )}
