@@ -851,16 +851,6 @@ export const players: Player[] = [
         ]
     },
     {
-        id: '69',
-        ign: 'KiinG',
-        realName: 'Khalid Kaabi',
-        nationality: 'Saudi Arabia',
-        role: 'SMG',
-        teams: [
-            { name: 'Las Vegas Falcons', years: '2024-2025'}
-        ]
-    },
-    {
         id: '70',
         ign: 'WXSL',
         realName: 'Fahad Alkahtani',
@@ -1246,6 +1236,19 @@ export const players: Player[] = [
         teams: [
             { name: 'Florida Mutineers', years: '2022-2022'},
             { name: 'Las Vegas Legion', years: '2023-2023'},
+        ]
+    },
+
+    // 2021-2022 Vanguard Season
+    {
+        id: '69',
+        ign: 'Crimsix',
+        realName: 'Ian Porter',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Dallas Empire', years: '2019-2021'},
+            { name: 'New York Subliners', years: '2021-2022'},
         ]
     },
 ]
