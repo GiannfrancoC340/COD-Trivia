@@ -56,7 +56,7 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Las Vegas Legion', years: '2023-2024' },
-            { name: 'Boston Breach', years: '2024-2026' }
+            { name: 'Boston Breach', years: '2024-' }
         ]
     },
     {
@@ -69,7 +69,7 @@ export const players: Player[] = [
             { name: 'London Royal Ravens', years: '2021-2023' },
             { name: 'Los Angeles Thieves', years: '2024-2024' },
             { name: 'Vancouver Surge', years: '2024-2025' },
-            { name: 'Boston Breach', years: '2025-2026' }
+            { name: 'Boston Breach', years: '2025-' }
         ]
     },
 
@@ -81,7 +81,7 @@ export const players: Player[] = [
         nationality: 'USA',
         role: 'SMG',
         teams: [
-            { name: 'Carolina Royal Ravens', years: '2025-2026' }
+            { name: 'Carolina Royal Ravens', years: '2025-' }
         ]
     },
     {
@@ -91,7 +91,7 @@ export const players: Player[] = [
         nationality: 'USA',
         role: 'AR',
         teams: [
-            { name: 'Carolina Royal Ravens', years: '2025-2026' }
+            { name: 'Carolina Royal Ravens', years: '2025-' }
         ]
     },
     {
@@ -104,7 +104,8 @@ export const players: Player[] = [
             { name: 'Boston Breach', years: '2022-2023'},
             { name: 'Las Vegas Legion', years: '2023-2024'},
             { name: 'Minnesota ROKKR', years: '2024-2025'},
-            { name: 'Carolina Royal Ravens', years: '2025-2026' }
+            { name: 'Carolina Royal Ravens', years: '2025-2026' },
+            { name: 'Vancouver Surge', years: '2026-' }
         ]
     },
     {
@@ -116,7 +117,7 @@ export const players: Player[] = [
         teams: [
             { name: 'Minnesota ROKKR', years: '2019-2020'},
             { name: 'Los Angeles Guerrillas', years: '2023-2023'},
-            { name: 'Carolina Royal Ravens', years: '2026-2026' }
+            { name: 'Carolina Royal Ravens', years: '2026-' }
         ]
     },
     {
@@ -147,7 +148,7 @@ export const players: Player[] = [
             { name: 'Minnesota ROKKR', years: '2022-2023'},
             { name: 'Los Angeles Thieves', years: '2023-2024'},
             { name: 'Cloud9 New York', years: '2025-2026' },
-            { name: 'Boston Breach', years: '2026-2026'}
+            { name: 'Boston Breach', years: '2026-'}
         ]
     },
     {
@@ -201,7 +202,7 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Atlanta FaZe', years: '2019-2025'},
-            { name: 'FaZe Vegas', years: '2025-2026' }
+            { name: 'FaZe Vegas', years: '2025-' }
         ]
     },
     {
@@ -213,7 +214,7 @@ export const players: Player[] = [
         teams: [
             { name: 'Seattle Surge', years: '2023-2024'},
             { name: 'Vancouver Surge', years: '2024-2025'},
-            { name: 'FaZe Vegas', years: '2025-2026' }
+            { name: 'FaZe Vegas', years: '2025-' }
         ]
     },
     {
@@ -225,7 +226,7 @@ export const players: Player[] = [
         teams: [
             { name: 'Seattle Surge', years: '2024-2024'},
             { name: 'Vancouver Surge', years: '2024-2025'},
-            { name: 'FaZe Vegas', years: '2025-2026' }
+            { name: 'FaZe Vegas', years: '2025-' }
         ]
     },
     {
@@ -238,7 +239,7 @@ export const players: Player[] = [
             { name: 'OpTic Gaming Los Angeles', years: '2020-2020'},
             { name: 'Los Angeles Thieves', years: '2020-2023'},
             { name: 'Atlanta FaZe', years: '2023-2025'},
-            { name: 'FaZe Vegas', years: '2025-2026' }
+            { name: 'FaZe Vegas', years: '2025-' }
         ]
     },
 
@@ -252,7 +253,7 @@ export const players: Player[] = [
         teams: [
             { name: 'Los Angeles Guerrillas', years: '2023-2024'},
             { name: 'Minnesota ROKKR', years: '2024-2025'},
-            { name: 'G2 Minnesota', years: '2025-2026' }
+            { name: 'G2 Minnesota', years: '2025-' }
         ]
     },
     {
@@ -265,7 +266,7 @@ export const players: Player[] = [
             { name: 'Boston Breach', years: '2023-2023'},
             { name: 'Los Angeles Thieves', years: '2024-2024'},
             { name: 'Cloud9 New York', years: '2024-2025'},
-            { name: 'G2 Minnesota', years: '2025-2026' }
+            { name: 'G2 Minnesota', years: '2025-' }
         ]
     },
     {
@@ -275,7 +276,7 @@ export const players: Player[] = [
         nationality: 'Mexico',
         role: 'AR',
         teams: [
-            { name: 'G2 Minnesota', years: '2025-2026' }
+            { name: 'G2 Minnesota', years: '2025-' }
         ]
     },
     {
@@ -289,7 +290,7 @@ export const players: Player[] = [
             { name: 'New York Subliners', years: '2022-2024'},
             { name: 'Los Angeles Guerrillas M8', years: '2024-2025'},
             { name: 'OpTic Texas', years: '2025-2025'},
-            { name: 'G2 Minnesota', years: '2025-2026' }
+            { name: 'G2 Minnesota', years: '2025-' }
         ]
     },
 
@@ -302,7 +303,7 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'New York Subliners', years: '2020-2024'},
-            { name: 'Los Angeles Thieves', years: '2024-2026' }
+            { name: 'Los Angeles Thieves', years: '2024-' }
         ]
     },
     {
@@ -313,7 +314,7 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Toronto Ultra', years: '2022-2024'},
-            { name: 'Los Angeles Thieves', years: '2024-2026' }
+            { name: 'Los Angeles Thieves', years: '2024-' }
         ]
     },
     {
@@ -338,7 +339,7 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Atlanta FaZe', years: '2019-2025'},
-            { name: 'Los Angeles Thieves', years: '2025-2026' }
+            { name: 'Los Angeles Thieves', years: '2025-' }
         ]
     },
 
@@ -351,7 +352,7 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Toronto Ultra', years: '2019-2020'},
-            { name: 'Miami Heretics', years: '2023-2026' }
+            { name: 'Miami Heretics', years: '2023-' }
         ]
     },
     {
@@ -361,7 +362,7 @@ export const players: Player[] = [
         nationality: 'Spain',
         role: 'AR',
         teams: [
-            { name: 'Miami Heretics', years: '2024-2026' }
+            { name: 'Miami Heretics', years: '2024-' }
         ]
     },
     {
@@ -371,7 +372,7 @@ export const players: Player[] = [
         nationality: 'Spain',
         role: 'AR',
         teams: [
-            { name: 'Miami Heretics', years: '2024-2026' }
+            { name: 'Miami Heretics', years: '2024-' }
         ]
     },
     {
@@ -381,7 +382,7 @@ export const players: Player[] = [
         nationality: 'Argentina',
         role: 'SMG',
         teams: [
-            { name: 'Miami Heretics', years: '2025-2026' }
+            { name: 'Miami Heretics', years: '2025-' }
         ]
     },
 
@@ -394,7 +395,7 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Dallas Empire', years: '2019-2021'},
-            { name: 'OpTic Texas', years: '2021-2026' }
+            { name: 'OpTic Texas', years: '2021-' }
         ]
     },
     {
@@ -406,7 +407,7 @@ export const players: Player[] = [
         teams: [
             { name: 'OpTic Gaming Los Angeles', years: '2019-2020'},
             { name: 'OpTic Chicago', years: '2020-2021'},
-            { name: 'OpTic Texas', years: '2021-2026' }
+            { name: 'OpTic Texas', years: '2021-' }
         ]
     },
     {
@@ -421,7 +422,7 @@ export const players: Player[] = [
             { name: 'Los Angeles Guerrillas', years: '2021-2023'},
             { name: 'OpTic Texas', years: '2023-2023'},
             { name: 'Seattle Surge', years: '2023-2024'},
-            { name: 'OpTic Texas', years: '2024-2026' }
+            { name: 'OpTic Texas', years: '2024-' }
         ]
     },
     {
@@ -432,7 +433,7 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Toronto Ultra', years: '2025-2025'},
-            { name: 'OpTic Texas', years: '2025-2026' }
+            { name: 'OpTic Texas', years: '2025-' }
         ]
     },
 
@@ -447,7 +448,7 @@ export const players: Player[] = [
             { name: 'Seattle Surge', years: '2021-2023'},
             { name: 'New York Subliners', years: '2023-2024'},
             { name: 'Cloud9 New York', years: '2024-2025'},
-            { name: 'Paris Gentlemates', years: '2025-2026' }
+            { name: 'Paris Gentlemates', years: '2025-' }
         ]
     },
     {
@@ -462,7 +463,7 @@ export const players: Player[] = [
             { name: 'Los Angeles Thieves', years: '2021-2023'},
             { name: 'Toronto Ultra', years: '2023-2024'},
             { name: 'Los Angeles Thieves', years: '2024-2025'},
-            { name: 'Paris Gentlemates', years: '2025-2206' }
+            { name: 'Paris Gentlemates', years: '2025-' }
         ]
     },
     {
@@ -474,7 +475,7 @@ export const players: Player[] = [
         teams: [
             { name: 'OpTic Texas', years: '2023-2023'},
             { name: 'Los Angeles Thieves', years: '2023-2025'},
-            { name: 'Paris Gentlemates', years: '2025-2026' }
+            { name: 'Paris Gentlemates', years: '2025-' }
         ]
     },
     {
@@ -488,7 +489,7 @@ export const players: Player[] = [
             { name: 'New York Subliners', years: '2021-2022'},
             { name: 'Los Angeles Guerrillas', years: '2022-2023'},
             { name: 'Vancouver Surge', years: '2025-2025'},
-            { name: 'Paris Gentlemates', years: '2025-2026' }
+            { name: 'Paris Gentlemates', years: '2025-' }
         ]
     },
 
@@ -503,7 +504,7 @@ export const players: Player[] = [
             { name: 'Seattle Surge', years: '2021-2023'},
             { name: 'OpTic Texas', years: '2023-2025'},
             { name: 'Las Vegas Falcons', years: '2025-2025'},
-            { name: 'Riyadh Falcons', years: '2025-2026' }
+            { name: 'Riyadh Falcons', years: '2025-' }
         ]
     },
     {
@@ -514,7 +515,7 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Las Vegas Falcons', years: '2024-2025'},
-            { name: 'Riyadh Falcons', years: '2025-2026' }
+            { name: 'Riyadh Falcons', years: '2025-' }
         ]
     },
     {
@@ -527,7 +528,7 @@ export const players: Player[] = [
             { name: 'Paris Legion', years: '2019-2020'},
             { name: 'New York Subliners', years: '2022-2024'},
             { name: 'Los Angeles Guerrillas M8', years: '2024-2025'},
-            { name: 'Riyadh Falcons', years: '2025-2026' }
+            { name: 'Riyadh Falcons', years: '2025-' }
         ]
     },
     {
@@ -538,7 +539,7 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Atlanta FaZe', years: '2019-2025'},
-            { name: 'Riyadh Falcons', years: '2025-2026' }
+            { name: 'Riyadh Falcons', years: '2025-' }
         ]
     },
 
@@ -551,7 +552,7 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Toronto Ultra', years: '2019-2025'},
-            { name: 'Toronto KOI', years: '2025-2026' }
+            { name: 'Toronto KOI', years: '2025-' }
         ]
     },
     {
@@ -562,7 +563,7 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Toronto Ultra', years: '2020-2025'},
-            { name: 'Toronto KOI', years: '2025-2026' }
+            { name: 'Toronto KOI', years: '2025-' }
         ]
     },
     {
@@ -587,7 +588,7 @@ export const players: Player[] = [
             { name: 'Los Angeles Guerrillas', years: '2023-2023'},
             { name: 'Los Angeles Thieves', years: '2023-2024'},
             { name: 'Toronto Ultra', years: '2024-2025'},
-            { name: 'Toronto KOI', years: '2025-2026' }
+            { name: 'Toronto KOI', years: '2025-' }
         ]
     },
 
@@ -611,7 +612,7 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Los Angeles Guerrillas M8', years: '2025-2025'},
-            { name: 'Vancouver Surge', years: '2025-2026' }
+            { name: 'Vancouver Surge', years: '2025-' }
         ]
     },
     {
@@ -623,7 +624,7 @@ export const players: Player[] = [
         teams: [
             { name: 'Carolina Royal Ravens', years: '2023-2025'},
             { name: 'Cloud9 New York', years: '2025-2025'},
-            { name: 'Vancouver Surge', years: '2025-2026' }
+            { name: 'Vancouver Surge', years: '2025-' }
         ]
     },
     {
@@ -639,7 +640,7 @@ export const players: Player[] = [
             { name: 'Las Vegas Legion', years: '2022-2023'},
             { name: 'Carolina Royal Ravens', years: '2024-2025'},
             { name: 'Las Vegas Falcons', years: '2025-2025'},
-            { name: 'Vancouver Surge', years: '2026-2026' }
+            { name: 'Vancouver Surge', years: '2026-' }
         ]
     },
     {
@@ -661,7 +662,7 @@ export const players: Player[] = [
         nationality: 'USA',
         role: 'AR',
         teams: [
-            { name: 'Los Angeles Thieves', years: '2026-2026' }
+            { name: 'Los Angeles Thieves', years: '2026-' }
         ]
     },
     {
@@ -671,7 +672,7 @@ export const players: Player[] = [
         nationality: 'USA',
         role: 'AR',
         teams: [
-            { name: 'Toronto KOI', years: '2026-2026' }
+            { name: 'Toronto KOI', years: '2026-' }
         ]
     },
     {
@@ -697,7 +698,58 @@ export const players: Player[] = [
         teams: [
             { name: 'Los Angeles Guerrillas', years: '2021-2023'},
             { name: 'Cloud9 New York', years: '2025-2025'},
-            { name: 'Boston Breach', years: '2026-2026' }
+            { name: 'Boston Breach', years: '2026-' }
+        ]
+    },
+    {
+        id: '103',
+        ign: 'Fire',
+        realName: 'Luis Rivera',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Paris Legion', years: '2020-2021'},
+            { name: 'Carolina Royal Ravens', years: '2026-' }
+        ]
+    },
+    {
+        id: '104',
+        ign: 'Nejra',
+        realName: 'Jonathan Pabon',
+        nationality: 'Puerto Rico',
+        role: 'SMG',
+        teams: [
+            { name: 'Cloud9 New York', years: '2026-' }
+        ]
+    },
+    {
+        id: '105',
+        ign: 'Okis',
+        realName: 'Arnel Avdagic',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Cloud9 New York', years: '2026-' }
+        ]
+    },
+    {
+        id: '106',
+        ign: 'Encourage',
+        realName: 'Jordan Byrd',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Cloud9 New York', years: '2026-' }
+        ]
+    },
+    {
+        id: '107',
+        ign: 'Hide',
+        realName: 'Jacob Bustillos',
+        nationality: 'Mexico',
+        role: 'SMG',
+        teams: [
+            { name: 'Cloud9 New York', years: '2026-' }
         ]
     },
 
