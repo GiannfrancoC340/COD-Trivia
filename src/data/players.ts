@@ -1303,4 +1303,82 @@ export const players: Player[] = [
             { name: 'New York Subliners', years: '2021-2022'},
         ]
     },
+    {
+        id: '108',
+        ign: 'Prestinni',
+        realName: 'Preston Sanderson',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Florida Mutineers', years: '2019-2020'},
+            { name: 'Chicago Huntsmen', years: '2020-2020'},
+            { name: 'Seattle Surge', years: '2020-2021'},
+            { name: 'Atlanta FaZe', years: '2021-2022'},
+        ]
+    },
+    {
+        id: '109',
+        ign: 'Gismo',
+        realName: 'Joey Owen',
+        nationality: 'UK',
+        role: 'AR',
+        teams: [
+            { name: 'London Royal Ravens', years: '2021-2022'},
+        ]
+    },
+    {
+        id: '110',
+        ign: 'Harry',
+        realName: 'Harry Payne',
+        nationality: 'UK',
+        role: 'AR',
+        teams: [
+            { name: 'London Royal Ravens', years: '2022-2022'},
+        ]
+    },
+    {
+        id: '111',
+        ign: 'GRVTY',
+        realName: 'Thomas Malin',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Paris Legion', years: '2022-2022'},
+        ]
+    },
+    {
+        id: '112',
+        ign: 'General',
+        realName: 'Jordan General',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Chicago Huntsmen', years: '2020-2020'},
+            { name: 'OpTic Texas', years: '2022-2022'},
+        ]
+    },
+    {
+        id: '113',
+        ign: 'John',
+        realName: 'Johnathan Perez',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Los Angeles Thieves', years: '2021-2021'},
+            { name: 'Paris Legion', years: '2021-2022'},
+        ]
+    },
+    {
+        id: '114',
+        ign: 'Royalty',
+        realName: 'Matthew Faithfull',
+        nationality: 'Canada',
+        role: 'SMG',
+        teams: [
+            { name: 'New York Subliners', years: '2022-2022'},
+        ]
+    },
+
+    // 2020-2021 Cold War Season
+    
 ]
