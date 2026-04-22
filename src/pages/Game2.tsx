@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import type { Event } from '../types';
 import { events } from '../data/events';
 import Header from '../components/Header';
+import Modal from '../components/Modal';
 import Toast from '../components/Toast';
 import { updateStats, loadStats, getWinToastMessage } from '../utils/stats';
 import { copyToClipboard, generateGame2ShareText } from '../utils/share';
@@ -16,6 +17,8 @@ function Game2() {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [showCopied, setShowCopied] = useState(false);
+  const [showHowToPlay, setShowHowToPlay] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
 
   const MAX_ATTEMPTS = 6;
 
@@ -103,12 +106,89 @@ function Game2() {
 
   return (
     <div className="game-container">
+      <Modal
+        isOpen={showHowToPlay}
+        onClose={() => setShowHowToPlay(false)}
+        title="How to Play - Championship Memory"
+      >
+        <p>Guess which team won a specific Call of Duty championship event!</p>
+
+        <h3>Rules:</h3>
+        <ul>
+          <li>You have <strong>6 attempts</strong> to guess the correct team</li>
+          <li>You'll see the event name, year, and COD title</li>
+          <li>Team names are flexible - you can use abbreviations!</li>
+        </ul>
+
+        <h3>Accepted Answers:</h3>
+        <div className="game-example">
+          <p><strong>Full name:</strong> Atlanta FaZe ✓</p>
+          <p><strong>City:</strong> Atlanta ✓</p>
+          <p><strong>Org:</strong> FaZe ✓</p>
+          <p><strong>Abbreviation:</strong> ATL ✓</p>
+        </div>
+
+        <h3>Example:</h3>
+        <div className="game-example">
+          <p><strong>Prompt:</strong> Which team won Major 2?</p>
+          <p><strong>Details:</strong> Black Ops 6 • 2025</p>
+          <p><strong>Your guess:</strong> OpTic ✓</p>
+        </div>
+
+        <h3>Sharing:</h3>
+        <div className="emoji-demo">
+          🟥🟥🟥🟩 4/6
+        </div>
+        <p>🟥 = Wrong guess | 🟩 = Correct guess</p>
+
+        <p><strong>A new event every day!</strong></p>
+      </Modal>
+
+      <Modal
+        isOpen={showAbout}
+        onClose={() => setShowAbout(false)}
+        title="About"
+      >
+        <p>
+          <strong>CoD Trivia</strong> is a daily puzzle game for Call of Duty esports fans.
+          Test your knowledge of professional players and championship history!
+        </p>
+
+        <h3>Two Daily Games:</h3>
+        <ul>
+          <li><strong>Guess the Pro:</strong> Identify players by their team history</li>
+          <li><strong>Championship Memory:</strong> Remember which teams won major events</li>
+        </ul>
+
+        <h3>Coverage:</h3>
+        <p>
+          All data covers the <strong>CDL era</strong> (2020-present), including:
+        </p>
+        <ul>
+          <li>Modern Warfare (2019)</li>
+          <li>Black Ops Cold War</li>
+          <li>Vanguard</li>
+          <li>Modern Warfare II</li>
+          <li>Modern Warfare III</li>
+          <li>Black Ops 6</li>
+          <li>Black Ops 7 (Current)</li>
+        </ul>
+
+        <p>
+          Created by a CoD esports fan, for CoD esports fans. New puzzles daily!
+        </p>
+      </Modal>
+
       <Toast
         message={toastMessage}
         show={showToast}
         onHide={() => setShowToast(false)}
       />
-      <Header title="Championship Memory" />
+      <Header
+        title="Championship Memory"
+        onHowToPlay={() => setShowHowToPlay(true)}
+        onAbout={() => setShowAbout(true)}
+      />
       
       <p className="attempts">Attempts: {guesses.length}/{MAX_ATTEMPTS}</p>
       

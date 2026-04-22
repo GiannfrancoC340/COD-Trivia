@@ -3,9 +3,11 @@ import './Header.css';
 
 interface HeaderProps {
   title: string;
+  onHowToPlay?: () => void;
+  onAbout?: () => void;
 }
 
-function Header({ title }: HeaderProps) {
+function Header({ title, onHowToPlay, onAbout }: HeaderProps) {
   const navigate = useNavigate();
 
   return (
@@ -14,7 +16,28 @@ function Header({ title }: HeaderProps) {
         ← Back
       </button>
       <h1>{title}</h1>
-      <div className="spacer"></div>
+      <div className="header-icons">
+        {onHowToPlay && (
+          <button 
+            onClick={onHowToPlay} 
+            className="icon-btn"
+            aria-label="How to Play"
+            title="How to Play"
+          >
+            📖
+          </button>
+        )}
+        {onAbout && (
+          <button 
+            onClick={onAbout} 
+            className="icon-btn"
+            aria-label="About"
+            title="About"
+          >
+            ℹ️
+          </button>
+        )}
+      </div>
     </header>
   );
 }
