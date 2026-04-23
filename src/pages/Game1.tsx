@@ -297,7 +297,7 @@ function Game1() {
               {showCopied ? '✓ Copied!' : 'Share Results'}
             </button>
             <Link to="/stats" className="result-link-btn">View Stats</Link>
-            <Link to="/unlimited" className="result-link-btn">Play Unlimited</Link>
+            <Link to="/unlimited/game1" className="result-link-btn">Play Unlimited</Link>
           </div>
         </div>
       )}
@@ -321,7 +321,7 @@ function Game1() {
               {showCopied ? '✓ Copied!' : 'Share Results'}
             </button>
             <Link to="/stats" className="result-link-btn">View Stats</Link>
-            <Link to="/unlimited" className="result-link-btn">Play Unlimited</Link>
+            <Link to="/unlimited/game1" className="result-link-btn">Play Unlimited</Link>
           </div>
         </div>
       )}

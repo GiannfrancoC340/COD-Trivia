@@ -1,15 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import type { Event } from '../types';
 import { events } from '../data/events';
 import Header from '../components/Header';
-import Modal from '../components/Modal';
 import Toast from '../components/Toast';
 import { updateStats, loadStats, getWinToastMessage } from '../utils/stats';
-import { getDailyEvent, getDailyGame2State, saveDailyGame2State } from '../utils/dailyPuzzle';
 import { copyToClipboard, generateGame2ShareText } from '../utils/share';
 
-function Game2() {
+function GameUnlimited2() {
   const [guess, setGuess] = useState('');
   const [guesses, setGuesses] = useState<string[]>([]);
   const [gameWon, setGameWon] = useState(false);
@@ -19,47 +16,27 @@ function Game2() {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [showCopied, setShowCopied] = useState(false);
-  const [showHowToPlay, setShowHowToPlay] = useState(false);
-  const [showAbout, setShowAbout] = useState(false);
-  const [countdown, setCountdown] = useState('');
 
   const MAX_ATTEMPTS = 6;
 
-  useEffect(() => {
-    const dailyEvent = getDailyEvent();
-    const state = getDailyGame2State();
+  const selectRandomEvent = () => {
+    setCurrentEvent(events[Math.floor(Math.random() * events.length)]);
+  };
 
-    if (state) {
-      const storedEvent = events.find(e => e.id === state.eventId) ?? dailyEvent;
-      setCurrentEvent(storedEvent);
-      setGuesses(state.guesses);
-      if (state.completed) {
-        setGameOver(true);
-        setGameWon(state.won);
-      }
-    } else {
-      setCurrentEvent(dailyEvent);
-    }
+  useEffect(() => {
+    selectRandomEvent();
   }, []);
 
-  // Countdown to midnight
-  useEffect(() => {
-    const tick = () => {
-      const now = new Date();
-      const midnight = new Date();
-      midnight.setHours(24, 0, 0, 0);
-      const diff = midnight.getTime() - now.getTime();
-      const h = Math.floor(diff / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-      setCountdown(
-        `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
-      );
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
+  const handlePlayAgain = () => {
+    setGuess('');
+    setGuesses([]);
+    setGameWon(false);
+    setGameOver(false);
+    setShowIncorrect(false);
+    setShowToast(false);
+    setShowCopied(false);
+    selectRandomEvent();
+  };
 
   const handleShare = async () => {
     if (!currentEvent) return;
@@ -88,19 +65,17 @@ function Game2() {
     setGuess('');
 
     if (isCorrect) {
-      saveDailyGame2State({ completed: true, won: true, guesses: newGuesses, eventId: currentEvent.id });
-      updateStats('game2-stats', true);
-      const streak = loadStats('game2-stats').currentStreak;
+      updateStats('game2-unlimited-stats', true);
+      const streak = loadStats('game2-unlimited-stats').currentStreak;
       setToastMessage(getWinToastMessage(streak));
       setGameWon(true);
       setGameOver(true);
       setShowToast(true);
     } else {
-      saveDailyGame2State({ completed: newGuesses.length >= MAX_ATTEMPTS, won: false, guesses: newGuesses, eventId: currentEvent.id });
       setShowIncorrect(true);
       setTimeout(() => setShowIncorrect(false), 500);
       if (newGuesses.length >= MAX_ATTEMPTS) {
-        updateStats('game2-stats', false);
+        updateStats('game2-unlimited-stats', false);
         setGameOver(true);
       }
     }
@@ -116,85 +91,8 @@ function Game2() {
 
   return (
     <div className="game-container">
-      <Modal
-        isOpen={showHowToPlay}
-        onClose={() => setShowHowToPlay(false)}
-        title="How to Play - Championship Memory"
-      >
-        <p>Guess which team won a specific Call of Duty championship event!</p>
-
-        <h3>Rules:</h3>
-        <ul>
-          <li>You have <strong>6 attempts</strong> to guess the correct team</li>
-          <li>You'll see the event name, year, and COD title</li>
-          <li>Team names are flexible - you can use abbreviations!</li>
-        </ul>
-
-        <h3>Accepted Answers:</h3>
-        <div className="game-example">
-          <p><strong>Full name:</strong> Atlanta FaZe ✓</p>
-          <p><strong>City:</strong> Atlanta ✓</p>
-          <p><strong>Org:</strong> FaZe ✓</p>
-          <p><strong>Abbreviation:</strong> ATL ✓</p>
-        </div>
-
-        <h3>Example:</h3>
-        <div className="game-example">
-          <p><strong>Prompt:</strong> Which team won Major 2?</p>
-          <p><strong>Details:</strong> Black Ops 6 • 2025</p>
-          <p><strong>Your guess:</strong> OpTic ✓</p>
-        </div>
-
-        <h3>Sharing:</h3>
-        <div className="emoji-demo">
-          🟥🟥🟥🟩 4/6
-        </div>
-        <p>🟥 = Wrong guess | 🟩 = Correct guess</p>
-
-        <p><strong>A new event every day!</strong></p>
-      </Modal>
-
-      <Modal
-        isOpen={showAbout}
-        onClose={() => setShowAbout(false)}
-        title="About"
-      >
-        <p>
-          <strong>CoD Trivia</strong> is a daily puzzle game for Call of Duty esports fans.
-          Test your knowledge of professional players and championship history!
-        </p>
-
-        <h3>Two Daily Games:</h3>
-        <ul>
-          <li><strong>Guess the Pro:</strong> Identify players by their team history</li>
-          <li><strong>Championship Memory:</strong> Remember which teams won major events</li>
-        </ul>
-
-        <h3>Coverage:</h3>
-        <p>
-          All data covers the <strong>CDL era</strong> (2020-present), including:
-        </p>
-        <ul>
-          <li>Modern Warfare (2019)</li>
-          <li>Black Ops Cold War</li>
-          <li>Vanguard</li>
-          <li>Modern Warfare II</li>
-          <li>Modern Warfare III</li>
-          <li>Black Ops 6</li>
-          <li>Black Ops 7 (Current)</li>
-        </ul>
-
-        <p>
-          Created by a CoD esports fan, for CoD esports fans. New puzzles daily!
-        </p>
-      </Modal>
-
       <Toast message={toastMessage} show={showToast} onHide={() => setShowToast(false)} />
-      <Header
-        title="Championship Memory"
-        onHowToPlay={() => setShowHowToPlay(true)}
-        onAbout={() => setShowAbout(true)}
-      />
+      <Header title="Championship Memory" />
 
       <p className="attempts">Attempts: {guesses.length}/{MAX_ATTEMPTS}</p>
 
@@ -245,13 +143,11 @@ function Game2() {
           ) : (
             <p>You got it in {guesses.length} {guesses.length === 1 ? 'attempt' : 'attempts'}!</p>
           )}
-          <div className="countdown">Next puzzle in: <strong>{countdown}</strong></div>
           <div className="action-buttons">
             <button onClick={handleShare} className="share-btn">
               {showCopied ? '✓ Copied!' : 'Share Results'}
             </button>
-            <Link to="/stats" className="result-link-btn">View Stats</Link>
-            <Link to="/unlimited/game2" className="result-link-btn">Play Unlimited</Link>
+            <button onClick={handlePlayAgain} className="play-again-btn">Play Again</button>
           </div>
         </div>
       )}
@@ -264,13 +160,11 @@ function Game2() {
           <div className="accepted-answers-info">
             <p className="hint-text">Accepted answers included: {currentEvent.acceptedAnswers.slice(0, 3).join(', ')}</p>
           </div>
-          <div className="countdown">Next puzzle in: <strong>{countdown}</strong></div>
           <div className="action-buttons">
             <button onClick={handleShare} className="share-btn">
               {showCopied ? '✓ Copied!' : 'Share Results'}
             </button>
-            <Link to="/stats" className="result-link-btn">View Stats</Link>
-            <Link to="/unlimited/game2" className="result-link-btn">Play Unlimited</Link>
+            <button onClick={handlePlayAgain} className="play-again-btn">Play Again</button>
           </div>
         </div>
       )}
@@ -278,4 +172,4 @@ function Game2() {
   );
 }
 
-export default Game2;
+export default GameUnlimited2;

@@ -2,7 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Game1 from './pages/Game1';
 import Game2 from './pages/Game2';
+import UnlimitedHome from './pages/UnlimitedHome';
 import GameUnlimited from './pages/GameUnlimited';
+import GameUnlimited2 from './pages/GameUnlimited2';
 import Stats from './pages/Stats';
 import './App.css';
 
@@ -14,7 +16,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/game1" element={<Game1 />} />
           <Route path="/game2" element={<Game2 />} />
-          <Route path="/unlimited" element={<GameUnlimited />} />
+          <Route path="/unlimited" element={<UnlimitedHome />} />
+          <Route path="/unlimited/game1" element={<GameUnlimited />} />
+          <Route path="/unlimited/game2" element={<GameUnlimited2 />} />
           <Route path="/stats" element={<Stats />} />
         </Routes>
       </div>
