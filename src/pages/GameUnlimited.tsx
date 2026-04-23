@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import type { Player } from '../types';
 import { players } from '../data/players';
 import Header from '../components/Header';
+import Modal from '../components/Modal';
 import Toast from '../components/Toast';
 import { updateStats, loadStats, getWinToastMessage } from '../utils/stats';
 import { getRandomPlayer } from '../utils/dailyPuzzle';
@@ -19,6 +20,8 @@ function GameUnlimited() {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [showCopied, setShowCopied] = useState(false);
+  const [showHowToPlay, setShowHowToPlay] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLUListElement>(null);
 
@@ -129,8 +132,76 @@ function GameUnlimited() {
 
   return (
     <div className="game-container">
+      <Modal
+        isOpen={showHowToPlay}
+        onClose={() => setShowHowToPlay(false)}
+        title="How to Play - Guess the Pro"
+      >
+        <p>Guess the Call of Duty professional player based on their team history!</p>
+
+        <h3>Rules:</h3>
+        <ul>
+          <li>You have <strong>6 attempts</strong> to guess the correct player</li>
+          <li>Each wrong guess reveals another team from their career</li>
+          <li>Teams are shown from their CDL career (2020-present)</li>
+          <li>Use the autocomplete to help with player names</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <div className="game-example">
+          <p><strong>Team Revealed:</strong> Atlanta FaZe (2020-2024)</p>
+          <p><strong>Your guess:</strong> Simp ✓</p>
+        </div>
+
+        <h3>Sharing:</h3>
+        <p>After completing the game, share your results!</p>
+        <div className="emoji-demo">
+          🟥🟥🟩 3/6
+        </div>
+        <p>🟥 = Wrong guess | 🟩 = Correct guess</p>
+      </Modal>
+
+      <Modal
+        isOpen={showAbout}
+        onClose={() => setShowAbout(false)}
+        title="About"
+      >
+        <p>
+          <strong>CoD Trivia</strong> is a daily puzzle game for Call of Duty esports fans.
+          Test your knowledge of professional players and championship history!
+        </p>
+
+        <h3>Two Daily Games:</h3>
+        <ul>
+          <li><strong>Guess the Pro:</strong> Identify players by their team history</li>
+          <li><strong>Championship Memory:</strong> Remember which teams won major events</li>
+        </ul>
+
+        <h3>Coverage:</h3>
+        <p>
+          All data covers the <strong>CDL era</strong> (2020-present), including:
+        </p>
+        <ul>
+          <li>Modern Warfare (2019)</li>
+          <li>Black Ops Cold War</li>
+          <li>Vanguard</li>
+          <li>Modern Warfare II</li>
+          <li>Modern Warfare III</li>
+          <li>Black Ops 6</li>
+          <li>Black Ops 7 (Current)</li>
+        </ul>
+
+        <p>
+          Created by a CoD esports fan, for CoD esports fans. New puzzles daily!
+        </p>
+      </Modal>
+
       <Toast message={toastMessage} show={showToast} onHide={() => setShowToast(false)} />
-      <Header title="Unlimited Mode" />
+      <Header
+        title="Guess the Pro"
+        onHowToPlay={() => setShowHowToPlay(true)}
+        onAbout={() => setShowAbout(true)}
+      />
 
       <p className="attempts">Attempts: {guesses.length}/6</p>
 
