@@ -1380,5 +1380,124 @@ export const players: Player[] = [
     },
 
     // 2020-2021 Cold War Season
-    
+    {
+        id: '115',
+        ign: 'Classic',
+        realName: 'Nicholas DiCostanzo',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Toronto Ultra', years: '2019-2020'},
+            { name: 'Paris Legion', years: '2020-2021'},
+            { name: 'Seattle Surge', years: '2021-2021'},
+        ]
+    },
+    {
+        id: '116',
+        ign: 'Loony',
+        realName: 'Daniel Loza',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Toronto Ultra', years: '2019-2020'},
+            { name: 'Seattle Surge', years: '2020-2021'},
+        ]
+    },
+    {
+        id: '117',
+        ign: 'Seany',
+        realName: 'Sean O Connor',
+        nationality: 'Scotland',
+        role: 'AR',
+        teams: [
+            { name: 'London Royal Ravens', years: '2019-2021'},
+        ]
+    },
+    {
+        id: '118',
+        ign: 'Zed',
+        realName: 'Zach Denyer',
+        nationality: 'UK',
+        role: 'SMG',
+        teams: [
+            { name: 'Paris Legion', years: '2019-2020'},
+            { name: 'London Royal Ravens', years: '2021-2021'},
+        ]
+    },
+    {
+        id: '119',
+        ign: 'Alexx',
+        realName: 'Alex Carpenter',
+        nationality: 'UK',
+        role: 'SMG',
+        teams: [
+            { name: 'Minnesota ROKKR', years: '2019-2020'},
+            { name: 'London Royal Ravens', years: '2020-2021'},
+        ]
+    },
+    {
+        id: '120',
+        ign: 'Dylan',
+        realName: 'Thomas Henderson',
+        nationality: 'Northern Ireland',
+        role: 'SMG',
+        teams: [
+            { name: 'London Royal Ravens', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '121',
+        ign: 'Apathy',
+        realName: 'Bryan Zhelyazkov',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Seattle Surge', years: '2019-2020'},
+            { name: 'Los Angeles Guerrillas', years: '2020-2021'},
+        ]
+    },
+    {
+        id: '122',
+        ign: 'SiLLY',
+        realName: 'Justin Fargo-Palmer',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Minnesota ROKKR', years: '2019-2020'},
+            { name: 'Los Angeles Guerrillas', years: '2020-2021'},
+        ]
+    },
+    {
+        id: '123',
+        ign: 'Cheen',
+        realName: 'Martin Chino',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'OpTic Gaming Los Angeles', years: '2019-2020'},
+            { name: 'Los Angeles Guerrillas', years: '2021-2021'},
+        ]
+    },
+    {
+        id: '124',
+        ign: 'AquA',
+        realName: 'Ulysses Silva',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Los Angeles Guerrillas', years: '2019-2020'},
+            { name: 'Paris Legion', years: '2020-2021'},
+        ]
+    },
+    {
+        id: '125',
+        ign: 'Slacked',
+        realName: 'Josiah Berry',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Seattle Surge', years: '2019-2020'},
+            { name: 'Florida Mutineers', years: '2020-2021'},
+        ]
+    },
 ]
