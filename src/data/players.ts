@@ -64,7 +64,7 @@ export const players: Player[] = [
         ign: 'Nastie',
         realName: 'Byron Plumridge',
         nationality: 'UK',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'London Royal Ravens', years: '2021-2023' },
             { name: 'Los Angeles Thieves', years: '2024-2024' },
@@ -181,7 +181,7 @@ export const players: Player[] = [
         ign: 'Vivid',
         realName: 'Reece Drost',
         nationality: 'USA',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Los Angeles Guerrillas', years: '2020-2021'},
             { name: 'Dallas Empire', years: '2021-2021'},
@@ -234,7 +234,7 @@ export const players: Player[] = [
         ign: 'Drazah',
         realName: 'Zack Jordan',
         nationality: 'USA',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'OpTic Gaming Los Angeles', years: '2020-2020'},
             { name: 'Los Angeles Thieves', years: '2020-2023'},
@@ -274,7 +274,7 @@ export const players: Player[] = [
         ign: 'Mamba',
         realName: 'Paul Solano',
         nationality: 'Mexico',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'G2 Minnesota', years: '2025-' }
         ]
@@ -311,7 +311,7 @@ export const players: Player[] = [
         ign: 'Scrap',
         realName: 'Thomas Ernst',
         nationality: 'USA',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Toronto Ultra', years: '2022-2024'},
             { name: 'Los Angeles Thieves', years: '2024-' }
@@ -360,7 +360,7 @@ export const players: Player[] = [
         ign: 'SupeR',
         realName: 'Diego Escudero',
         nationality: 'Spain',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Miami Heretics', years: '2024-' }
         ]
@@ -430,7 +430,7 @@ export const players: Player[] = [
         ign: 'Mercules',
         realName: 'Mason Ramsey',
         nationality: 'USA',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Toronto Ultra', years: '2025-2025'},
             { name: 'OpTic Texas', years: '2025-' }
@@ -443,7 +443,7 @@ export const players: Player[] = [
         ign: 'Sib',
         realName: 'Daunte Gray',
         nationality: 'USA',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Seattle Surge', years: '2021-2023'},
             { name: 'New York Subliners', years: '2023-2024'},
@@ -670,7 +670,7 @@ export const players: Player[] = [
         ign: 'Kips',
         realName: 'Nicholas Lyons',
         nationality: 'USA',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Toronto KOI', years: '2026-' }
         ]
@@ -957,7 +957,7 @@ export const players: Player[] = [
         ign: 'Wrecks',
         realName: 'Dillon Slotter',
         nationality: 'USA',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Carolina Royal Ravens', years: '2025-2025'}
         ]
@@ -1024,7 +1024,7 @@ export const players: Player[] = [
         ign: 'iLLeY',
         realName: 'Indervir Dhaliwal',
         nationality: 'Canada',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Dallas Empire', years: '2019-2021'},
             { name: 'OpTic Texas', years: '2021-2023'},
@@ -1111,7 +1111,7 @@ export const players: Player[] = [
         ign: 'Gunless',
         realName: 'Peirce Hillman',
         nationality: 'Canada',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Chicago Huntsmen', years: '2019-2020'},
             { name: 'Seattle Surge', years: '2020-2021'},
@@ -1195,7 +1195,7 @@ export const players: Player[] = [
         ign: 'Brack',
         realName: 'Carson Newberry',
         nationality: 'USA',
-        role: 'SMG',
+        role: 'AR',
         teams: [
             { name: 'Toronto Ultra', years: '2019-2020'},
             { name: 'Florida Mutineers', years: '2022-2023'}
@@ -1262,7 +1262,7 @@ export const players: Player[] = [
         ign: 'Prolute',
         realName: 'Byron Vega',
         nationality: 'USA',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'OpTic Texas', years: '2022-2022'},
             { name: 'Las Vegas Legion', years: '2022-2023'},
@@ -1321,7 +1321,7 @@ export const players: Player[] = [
         ign: 'Gismo',
         realName: 'Joey Owen',
         nationality: 'UK',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'London Royal Ravens', years: '2021-2022'},
         ]

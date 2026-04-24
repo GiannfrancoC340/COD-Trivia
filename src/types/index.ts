@@ -2,7 +2,6 @@
 export interface Team {
   name: string;
   years: string;
-  logo?: string;
 }
 
 export interface Player {
@@ -10,7 +9,7 @@ export interface Player {
   ign: string;
   realName: string;
   nationality: string;
-  role: string;
+  role: 'SMG' | 'AR' | 'Flex';
   teams: Team[];
 }
 

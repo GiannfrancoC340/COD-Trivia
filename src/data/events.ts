@@ -33,7 +33,7 @@ export const events: Event[] = [
     year: 2025,
     codTitle: 'Black Ops 6',
     winningTeam: 'Los Angeles Thieves',
-    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves', 'la', 'los angeles']
+    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves']
   },
   {
     id: '4',
@@ -41,7 +41,7 @@ export const events: Event[] = [
     year: 2025,
     codTitle: 'Black Ops 6',
     winningTeam: 'Los Angeles Thieves',
-    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves', 'la', 'los angeles']
+    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves']
   },
   {
     id: '5',
@@ -141,7 +141,7 @@ export const events: Event[] = [
     year: 2023,
     codTitle: 'Modern Warfare 2',
     winningTeam: 'Los Angeles Thieves',
-    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves', 'la', 'los angeles']
+    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves']
   },
   {
     id: '17',
@@ -201,7 +201,7 @@ export const events: Event[] = [
     year: 2022,
     codTitle: 'Vanguard',
     winningTeam: 'Los Angeles Guerrillas',
-    acceptedAnswers: ['los angeles guerrillas', 'guerrillas', 'lag', 'la guerrillas', 'la', 'los angeles']
+    acceptedAnswers: ['los angeles guerrillas', 'guerrillas', 'lag', 'la guerrillas']
   },
   {
     id: '24',
@@ -225,7 +225,7 @@ export const events: Event[] = [
     year: 2022,
     codTitle: 'Vanguard',
     winningTeam: 'Los Angeles Thieves',
-    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves', 'la', 'los angeles']
+    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves']
   },
   {
     id: '27',
@@ -233,7 +233,7 @@ export const events: Event[] = [
     year: 2022,
     codTitle: 'Vanguard',
     winningTeam: 'Los Angeles Thieves',
-    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves', 'la', 'los angeles']
+    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves']
   },
 
   // 2020-2021 Cold War Season
