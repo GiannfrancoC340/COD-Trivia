@@ -285,4 +285,110 @@ export const events: Event[] = [
     winningTeam: 'Atlanta FaZe',
     acceptedAnswers: ['atlanta faze', 'faze', 'atlanta', 'atl']
   },
+
+  // 2019-2020 MW19 Season
+  {
+    id: '34',
+    name: 'London Home Series Week 2',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'Chicago Huntsmen',
+    acceptedAnswers: ['chicago huntsmen', 'huntsmen', 'chicago', 'chi']
+  },
+  {
+    id: '35',
+    name: 'Atlanta Home Series',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'Atlanta FaZe',
+    acceptedAnswers: ['atlanta faze', 'faze', 'atlanta', 'atl']
+  },
+  {
+    id: '36',
+    name: 'Los Angeles Home Series',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'Dallas Empire',
+    acceptedAnswers: ['dallas empire', 'empire', 'dallas', 'dal']
+  },
+  {
+    id: '37',
+    name: 'Dallas Home Series',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'Florida Mutineers',
+    acceptedAnswers: ['florida mutineers', 'mutineers', 'florida', 'fl']
+  },
+  {
+    id: '38',
+    name: 'Chicago Home Series',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'Dallas Empire',
+    acceptedAnswers: ['dallas empire', 'empire', 'dallas', 'dal']
+  },
+  {
+    id: '39',
+    name: 'Florida Home Series',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'Atlanta FaZe',
+    acceptedAnswers: ['atlanta faze', 'faze', 'atlanta', 'atl']
+  },
+  {
+    id: '40',
+    name: 'Seattle Home Series',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'Chicago Huntsmen',
+    acceptedAnswers: ['chicago huntsmen', 'huntsmen', 'chicago', 'chi']
+  },
+  {
+    id: '41',
+    name: 'Minnesota Home Series',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'Florida Mutineers',
+    acceptedAnswers: ['florida mutineers', 'mutineers', 'florida', 'fl']
+  },
+  {
+    id: '42',
+    name: 'Paris Home Series',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'Florida Mutineers',
+    acceptedAnswers: ['florida mutineers', 'mutineers', 'florida', 'fl']
+  },
+  {
+    id: '43',
+    name: 'New York Home Series',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'New York Subliners',
+    acceptedAnswers: ['new york subliners', 'subliners', 'NY', 'NYSL', 'new york', 'ny subliners']
+  },
+  {
+    id: '44',
+    name: 'London Home Series Week 12',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'Dallas Empire',
+    acceptedAnswers: ['dallas empire', 'empire', 'dallas', 'dal']
+  },
+  {
+    id: '45',
+    name: 'Toronto Home Series',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'Toronto Ultra',
+    acceptedAnswers: ['toronto ultra', 'ultra', 'tor', 'toronto']
+  },
+  {
+    id: '46',
+    name: 'Champs',
+    year: 2020,
+    codTitle: 'Modern Warfare',
+    winningTeam: 'Dallas Empire',
+    acceptedAnswers: ['dallas empire', 'empire', 'dallas', 'dal']
+  },
 ];
