@@ -1500,4 +1500,81 @@ export const players: Player[] = [
             { name: 'Florida Mutineers', years: '2020-2021'},
         ]
     },
+    {
+        id: '126',
+        ign: 'FormaL',
+        realName: 'Matthew Piper',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Chicago Huntsmen', years: '2019-2020'},
+            { name: 'OpTic Chicago', years: '2020-2021'},
+        ]
+    },
+    {
+        id: '127',
+        ign: 'Decemate',
+        realName: 'Jacob Cato',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Los Angeles Guerrillas', years: '2019-2020'},
+            { name: 'Seattle Surge', years: '2021-2021'},
+            { name: 'New York Subliners', years: '2021-2021'},
+            { name: 'Paris Legion', years: '2021-2022'},
+        ]
+    },
+    {
+        id: '128',
+        ign: 'Zaptius',
+        realName: 'Alex Bonilla',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'London Royal Ravens', years: '2021-2021'},
+            { name: 'Paris Legion', years: '2021-2021'},
+        ]
+    },
+    {
+        id: '129',
+        ign: 'Venom',
+        realName: 'Carlos Hernandez',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Los Angeles Thieves', years: '2021-2021'},
+        ]
+    },
+    {
+        id: '130',
+        ign: 'Parasite',
+        realName: 'Christopher Duarte',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'London Royal Ravens', years: '2021-2021'},
+        ]
+    },
+    {
+        id: '131',
+        ign: 'MentaL',
+        realName: 'Billy Putnam',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Los Angeles Guerrillas', years: '2021-2021'},
+        ]
+    },
+
+    // 2019-2020 MW19 Season
+    {
+        id: '132',
+        ign: 'JKap',
+        realName: 'Jordan Kaplan',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'OpTic Gaming Los Angeles', years: '2019-2020'},
+        ]
+    },
 ]
