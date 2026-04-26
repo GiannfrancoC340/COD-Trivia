@@ -18,8 +18,8 @@ function Header({ title, onHowToPlay, onAbout }: HeaderProps) {
       <h1>{title}</h1>
       <div className="header-icons">
         {onHowToPlay && (
-          <button 
-            onClick={onHowToPlay} 
+          <button
+            onClick={onHowToPlay}
             className="icon-btn"
             aria-label="How to Play"
             title="How to Play"
@@ -28,8 +28,8 @@ function Header({ title, onHowToPlay, onAbout }: HeaderProps) {
           </button>
         )}
         {onAbout && (
-          <button 
-            onClick={onAbout} 
+          <button
+            onClick={onAbout}
             className="icon-btn"
             aria-label="About"
             title="About"
@@ -37,6 +37,14 @@ function Header({ title, onHowToPlay, onAbout }: HeaderProps) {
             ℹ️
           </button>
         )}
+        <button
+          onClick={() => navigate('/settings')}
+          className="icon-btn"
+          aria-label="Settings"
+          title="Settings"
+        >
+          ⚙️
+        </button>
       </div>
     </header>
   );

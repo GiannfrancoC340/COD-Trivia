@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Modal from '../components/Modal';
 import './Home.css';
 
 function Home() {
+    const navigate = useNavigate();
     const [showHowToPlay, setShowHowToPlay] = useState(false);
     const [showAbout, setShowAbout] = useState(false);
 
@@ -78,22 +79,32 @@ function Home() {
             <header className="home-header">
                 <h1>CoD Esports Trivia</h1>
                 <p className="subtitle">Daily puzzles for Call of Duty fans!</p>
-                <div className="home-header-icons">
+                <div className="home-header-icon-row">
+                    <div className="home-header-icons">
+                        <button
+                            onClick={() => setShowHowToPlay(true)}
+                            className="icon-btn"
+                            aria-label="How to Play"
+                            title="How to Play"
+                        >
+                            📖
+                        </button>
+                        <button
+                            onClick={() => setShowAbout(true)}
+                            className="icon-btn"
+                            aria-label="About"
+                            title="About"
+                        >
+                            ℹ️
+                        </button>
+                    </div>
                     <button
-                        onClick={() => setShowHowToPlay(true)}
-                        className="icon-btn"
-                        aria-label="How to Play"
-                        title="How to Play"
+                        onClick={() => navigate('/settings')}
+                        className="icon-btn home-settings-btn"
+                        aria-label="Settings"
+                        title="Settings"
                     >
-                        📖
-                    </button>
-                    <button
-                        onClick={() => setShowAbout(true)}
-                        className="icon-btn"
-                        aria-label="About"
-                        title="About"
-                    >
-                        ℹ️
+                        ⚙️
                     </button>
                 </div>
             </header>

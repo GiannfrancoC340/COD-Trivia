@@ -10,11 +10,22 @@
   margin-bottom: 3rem;
 }
 
+.home-header-icon-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
 .home-header-icons {
   display: flex;
   gap: 0.5rem;
-  justify-content: center;
-  margin-top: 1rem;
+}
+
+.home-settings-btn {
+  position: absolute;
+  right: 0;
 }
 
 .home-header-icons .icon-btn {

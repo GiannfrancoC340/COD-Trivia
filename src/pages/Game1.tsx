@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Modal from '../components/Modal';
 import Toast from '../components/Toast';
 import { updateStats, loadStats, getWinToastMessage } from '../utils/stats';
+import { loadSettings } from '../utils/settings';
 import { getDailyPlayer, getDailyGameState, saveDailyGameState } from '../utils/dailyPuzzle';
 import { copyToClipboard, generateGame1ShareText } from '../utils/share';
 
@@ -18,6 +19,7 @@ function Game1() {
   const [showIncorrect, setShowIncorrect] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
+  const [hardMode] = useState(() => loadSettings().hardMode);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [showCopied, setShowCopied] = useState(false);
@@ -81,7 +83,7 @@ function Game1() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setCurrentGuess(value);
-    if (value.trim().length > 0) {
+    if (!hardMode && value.trim().length > 0) {
       const alreadyGuessed = guesses.map(g => g.toLowerCase());
       const filtered = players
         .map(p => p.ign)

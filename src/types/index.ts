@@ -23,6 +23,12 @@ export interface Event {
   acceptedAnswers: string[];  // Array of valid answers (OpTic, OpTic Texas, OPT, etc.)
 }
 
+export interface Settings {
+  hardMode: boolean;
+  noAnimations: boolean;
+  lightMode: boolean;
+}
+
 // Game state types
 export interface GameStats {
   played: number;

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Game1 from './pages/Game1';
@@ -6,9 +7,15 @@ import UnlimitedHome from './pages/UnlimitedHome';
 import GameUnlimited from './pages/GameUnlimited';
 import GameUnlimited2 from './pages/GameUnlimited2';
 import Stats from './pages/Stats';
+import SettingsPage from './pages/Settings';
+import { loadSettings, applySettings } from './utils/settings';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    applySettings(loadSettings());
+  }, []);
+
   return (
     <Router>
       <div className="App">
@@ -20,6 +27,7 @@ function App() {
           <Route path="/unlimited/game1" element={<GameUnlimited />} />
           <Route path="/unlimited/game2" element={<GameUnlimited2 />} />
           <Route path="/stats" element={<Stats />} />
+          <Route path="/settings" element={<SettingsPage />} />
         </Routes>
       </div>
     </Router>

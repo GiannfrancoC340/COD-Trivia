@@ -48,3 +48,135 @@ a:hover {
 }
 
 /* Remove light mode media query since you're doing dark-only theme */
+
+/* ========================
+   No animations
+   ======================== */
+.no-animations *,
+.no-animations *::before,
+.no-animations *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* ========================
+   Light mode overrides
+   ======================== */
+.light-mode,
+.light-mode body {
+  background-color: #f0f0f5;
+  color: #111;
+}
+
+.light-mode .App {
+  background: #f0f0f5;
+  color: #111;
+}
+
+/* Surfaces */
+.light-mode .game-card {
+  background: #ffffff;
+  border-color: #ddd;
+  color: #111;
+}
+.light-mode .game-card p { color: #555; }
+.light-mode .game-card:hover { box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2); }
+
+.light-mode .team-card {
+  background: #ffffff;
+  border-color: #ddd;
+}
+.light-mode .team-card p { color: #666; }
+
+.light-mode .event-prompt {
+  background: #ffffff;
+  border-color: #ddd;
+}
+
+.light-mode .team-reveal { background: #f5f5f5; }
+
+.light-mode .guess-chip {
+  background: #ebebeb;
+  border-color: #ddd;
+  color: #111;
+}
+
+/* Buttons */
+.light-mode .back-btn {
+  background: #ffffff;
+  color: #111;
+  border-color: #ddd;
+}
+.light-mode .back-btn:hover { background: #f0f0f0; }
+
+.light-mode .icon-btn,
+.light-mode .home-header-icons .icon-btn {
+  background: #ffffff;
+  border-color: #ddd;
+}
+.light-mode .icon-btn:hover,
+.light-mode .home-header-icons .icon-btn:hover {
+  background: #f0f0f0;
+}
+
+.light-mode .stats-link {
+  background: #ffffff;
+  color: #555;
+  border-color: #ddd;
+}
+.light-mode .stats-link:hover { background: #f0f0f0; color: #111; }
+
+.light-mode .result-link-btn {
+  background: #ffffff;
+  color: #111;
+  border-color: #ddd;
+}
+.light-mode .result-link-btn:hover { background: #f0f0f0; }
+
+.light-mode .share-btn {
+  background: #ffffff;
+  color: #111;
+}
+
+/* Form inputs */
+.light-mode .guess-input {
+  background: #ffffff;
+  border-color: #ddd;
+  color: #111;
+}
+.light-mode .guess-input::placeholder { color: #aaa; }
+
+/* Autocomplete */
+.light-mode .suggestions-list {
+  background: #ffffff;
+  border-color: #ddd;
+}
+.light-mode .suggestion-item { color: #111; }
+.light-mode .suggestion-item:hover { background: #f0f0f0; }
+
+/* Secondary text */
+.light-mode .attempts,
+.light-mode .previous-guesses h3,
+.light-mode .all-teams h3,
+.light-mode .event-details,
+.light-mode .player-info,
+.light-mode .event-subtitle { color: #666; }
+
+/* Dividers */
+.light-mode .all-teams,
+.light-mode .accepted-answers-info { border-top-color: #ddd; }
+
+/* Settings page */
+.light-mode .settings-row { border-color: #ddd; }
+.light-mode .settings-title { color: #111; }
+.light-mode .settings-desc { color: #666; }
+.light-mode .toggle { background: #ccc; }
+.light-mode .settings-revert-btn {
+  color: #666;
+  border-color: #ddd;
+}
+.light-mode .settings-revert-btn:hover {
+  border-color: #ea6666;
+  color: #ea6666;
+}
