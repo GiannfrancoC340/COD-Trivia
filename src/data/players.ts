@@ -1577,4 +1577,15 @@ export const players: Player[] = [
             { name: 'OpTic Gaming Los Angeles', years: '2019-2020'},
         ]
     },
+    {
+        id: '133',
+        ign: 'GodRX',
+        realName: 'Adam Brown',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Minnesota ROKKR', years: '2019-2020'},
+            { name: 'Carolina Royal Ravens', years: '2023-2024'},
+        ]
+    },
 ]
