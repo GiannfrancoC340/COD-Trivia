@@ -37,14 +37,6 @@ function Header({ title, onHowToPlay, onAbout }: HeaderProps) {
             ℹ️
           </button>
         )}
-        <button
-          onClick={() => navigate('/settings')}
-          className="icon-btn"
-          aria-label="Settings"
-          title="Settings"
-        >
-          ⚙️
-        </button>
       </div>
     </header>
   );

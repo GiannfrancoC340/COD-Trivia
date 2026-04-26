@@ -1,21 +1,40 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useRef, useMemo, useEffect } from 'react';
+import { useNavigate, useBlocker } from 'react-router-dom';
 import type { Settings as SettingsType } from '../types';
 import { loadSettings, saveSettings, applySettings, DEFAULT_SETTINGS } from '../utils/settings';
+import Modal from '../components/Modal';
 import './Settings.css';
 
 function Settings() {
   const navigate = useNavigate();
-  const [draft, setDraft] = useState<SettingsType>(() => loadSettings());
+  const initialSettings = useRef<SettingsType>(loadSettings());
+  const [draft, setDraft] = useState<SettingsType>(() => ({ ...initialSettings.current }));
+
+  const isDirty = useMemo(
+    () => JSON.stringify(draft) !== JSON.stringify(initialSettings.current),
+    [draft]
+  );
+
+  const [pendingNavigate, setPendingNavigate] = useState(false);
+  const blocker = useBlocker(!pendingNavigate && isDirty);
+
+  useEffect(() => {
+    if (pendingNavigate) navigate(-1);
+  }, [pendingNavigate, navigate]);
 
   const toggle = (key: keyof SettingsType) => {
     setDraft(prev => ({ ...prev, [key]: !prev[key] }));
   };
 
-  const handleSave = () => {
+  const save = () => {
     saveSettings(draft);
     applySettings(draft);
-    navigate(-1);
+    initialSettings.current = { ...draft };
+  };
+
+  const handleSave = () => {
+    save();
+    setPendingNavigate(true);
   };
 
   const handleRevert = () => {
@@ -23,10 +42,30 @@ function Settings() {
     setDraft(defaults);
     saveSettings(defaults);
     applySettings(defaults);
+    initialSettings.current = { ...defaults };
   };
 
   return (
     <div className="settings-container">
+      <Modal
+        isOpen={blocker.state === 'blocked'}
+        onClose={() => blocker.reset?.()}
+        title="Unsaved Changes"
+      >
+        <p className="settings-blocker-msg">You have unsaved changes. What would you like to do?</p>
+        <div className="settings-blocker-actions">
+          <button className="settings-save-btn" onClick={() => { save(); blocker.proceed?.(); }}>
+            Save &amp; Leave
+          </button>
+          <button className="settings-revert-btn" onClick={() => blocker.proceed?.()}>
+            Discard &amp; Leave
+          </button>
+          <button className="settings-revert-btn" onClick={() => blocker.reset?.()}>
+            Keep Editing
+          </button>
+        </div>
+      </Modal>
+
       <div className="settings-header">
         <button className="back-btn" onClick={() => navigate(-1)}>← Back</button>
         <h1>Settings</h1>
@@ -72,7 +111,12 @@ function Settings() {
       </div>
 
       <div className="settings-actions">
-        <button className="settings-save-btn" onClick={handleSave}>Save</button>
+        <button
+          className={`settings-save-btn${isDirty ? ' dirty' : ''}`}
+          onClick={handleSave}
+        >
+          {isDirty ? '● Save Changes' : 'Save'}
+        </button>
         <button className="settings-revert-btn" onClick={handleRevert}>Revert to Defaults</button>
       </div>
     </div>
