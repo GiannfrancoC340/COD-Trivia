@@ -101,6 +101,16 @@ a:hover {
   border-color: #ddd;
   color: #111;
 }
+.light-mode .guess-chip.incorrect {
+  background: rgba(200, 50, 50, 0.12);
+  border-color: #cc3333;
+  color: #aa0000;
+}
+.light-mode .guess-chip.correct {
+  background: rgba(40, 160, 40, 0.12);
+  border-color: #33a033;
+  color: #006600;
+}
 
 /* Buttons */
 .light-mode .back-btn {
@@ -180,3 +190,49 @@ a:hover {
   border-color: #ea6666;
   color: #ea6666;
 }
+
+/* Modal */
+.light-mode .modal-content {
+  background: #ffffff;
+  border-color: #ddd;
+}
+.light-mode .modal-header { border-bottom-color: #ddd; }
+.light-mode .modal-close { color: #888; }
+.light-mode .modal-close:hover { background: #f0f0f0; color: #111; }
+.light-mode .modal-body { color: #333; }
+.light-mode .modal-body p,
+.light-mode .modal-body li { color: #444; }
+.light-mode .game-example {
+  background: #f5f5f5;
+  border-color: #ddd;
+}
+
+/* Stats page */
+.light-mode .stats-section {
+  background: #ffffff;
+  border-color: #ddd;
+}
+.light-mode .stats-section h2 { color: #777; }
+.light-mode .stat-card { background: #f0f0f5; }
+.light-mode .stat-label { color: #888; }
+.light-mode .back-link {
+  background: #ffffff;
+  color: #111;
+  border-color: #ddd;
+}
+.light-mode .back-link:hover { background: #f0f0f0; }
+
+/* Unlimited mode cards */
+.light-mode .unlimited-card {
+  background: #ffffff;
+  border-color: #ddd;
+  color: #111;
+}
+.light-mode .unlimited-card p { color: #555; }
+.light-mode .unlimited-card:hover { box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2); }
+.light-mode .unlimited-header .back-link {
+  background: #ffffff;
+  color: #111;
+  border-color: #ddd;
+}
+.light-mode .unlimited-subtitle { color: #777; }
