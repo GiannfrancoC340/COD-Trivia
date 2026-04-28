@@ -32,6 +32,13 @@ function Home() {
                     <li>Team names are flexible — abbreviations accepted!</li>
                 </ul>
 
+                <h3>Streaks:</h3>
+                <ul>
+                    <li>Your streak increases by 1 each time you win a game</li>
+                    <li>A single loss resets your streak back to 0</li>
+                    <li>Skipping a day does <strong>not</strong> break your streak</li>
+                </ul>
+
                 <h3>Sharing:</h3>
                 <div className="emoji-demo">
                     🟥🟥🟩 3/6

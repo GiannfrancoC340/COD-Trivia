@@ -759,7 +759,7 @@ export const players: Player[] = [
         ign: 'Owakening',
         realName: 'Joseph Conley',
         nationality: 'USA',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Florida Mutineers', years: '2020-2022'},
             { name: 'Boston Breach', years: '2022-2023'},
@@ -783,7 +783,7 @@ export const players: Player[] = [
         ign: 'Priestahh',
         realName: 'Preston Greiner',
         nationality: 'USA',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Atlanta FaZe', years: '2019-2020'},
             { name: 'Minnesota ROKKR', years: '2020-2022'},
