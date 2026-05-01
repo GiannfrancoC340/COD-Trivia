@@ -79,7 +79,7 @@ function Home() {
                 </ul>
 
                 <p>
-                    Created by a CoD esports fan, for CoD esports fans. New puzzles daily!
+                    Made by Giannfranco Crovetto, a Software Developer from Broward County, FL. CoD esports fan and LAT fan.
                 </p>
             </Modal>
 
