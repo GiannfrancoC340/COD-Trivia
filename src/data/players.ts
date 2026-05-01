@@ -89,7 +89,7 @@ export const players: Player[] = [
         ign: 'Lurqxx',
         realName: 'Logan Brown',
         nationality: 'USA',
-        role: 'AR',
+        role: 'SMG',
         teams: [
             { name: 'Carolina Royal Ravens', years: '2025-' }
         ]
@@ -156,7 +156,7 @@ export const players: Player[] = [
         ign: 'Beans',
         realName: 'Ben McMellon',
         nationality: 'UK',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Boston Breach', years: '2022-2024'},
             { name: 'Carolina Royal Ravens', years: '2024-2024'},
@@ -867,7 +867,7 @@ export const players: Player[] = [
         ign: 'KingAbody',
         realName: 'Abdulelah Alrajhi',
         nationality: 'Saudi Arabia',
-        role: 'AR',
+        role: 'SMG',
         teams: [
             { name: 'Las Vegas Falcons', years: '2024-2025'}
         ]
@@ -877,7 +877,7 @@ export const players: Player[] = [
         ign: 'Khhx',
         realName: 'Khalid Almadhi',
         nationality: 'Saudi Arabia',
-        role: 'SMG',
+        role: 'AR',
         teams: [
             { name: 'Las Vegas Falcons', years: '2024-2025'}
         ]
@@ -887,7 +887,7 @@ export const players: Player[] = [
         ign: 'd7oom',
         realName: 'Abdulrahman Althunayan',
         nationality: 'Saudi Arabia',
-        role: 'AR',
+        role: 'SMG',
         teams: [
             { name: 'Las Vegas Falcons', years: '2024-2025'}
         ]
@@ -980,7 +980,7 @@ export const players: Player[] = [
         ign: 'JurNii',
         realName: 'Juan Antonio González Muñoz',
         nationality: 'Spain',
-        role: 'AR',
+        role: 'SMG',
         teams: [
             { name: 'Miami Heretics', years: '2023-2024'}
         ]
@@ -1075,7 +1075,7 @@ export const players: Player[] = [
         ign: 'EriKBooM',
         realName: 'Eric Ferrer',
         nationality: 'Spain',
-        role: 'AR',
+        role: 'SMG',
         teams: [
             { name: 'Miami Heretics', years: '2024-2024'}
         ]
@@ -1719,16 +1719,6 @@ export const players: Player[] = [
         ]
     },
     {
-        id: '147',
-        ign: 'Louqa',
-        realName: 'Luke Rigas',
-        nationality: 'Australia',
-        role: 'AR',
-        teams: [
-            { name: 'Paris Legion', years: '2019-2020'},
-        ]
-    },
-    {
         id: '148',
         ign: 'Pandur',
         realName: 'Casey Romano',
@@ -1783,7 +1773,7 @@ export const players: Player[] = [
         ign: 'Hollow',
         realName: 'Darien Chverchko',
         nationality: 'USA',
-        role: 'Flex',
+        role: 'AR',
         teams: [
             { name: 'OpTic Gaming Los Angeles', years: '2020-2020'},
         ]
