@@ -798,7 +798,7 @@ export const players: Player[] = [
         ign: 'Attach',
         realName: 'Dillon Price',
         nationality: 'USA',
-        role: 'SMG',
+        role: 'Flex',
         teams: [
             { name: 'New York Subliners', years: '2019-2020'},
             { name: 'Minnesota ROKKR', years: '2020-2023'},
@@ -1461,7 +1461,7 @@ export const players: Player[] = [
         ign: 'SiLLY',
         realName: 'Justin Fargo-Palmer',
         nationality: 'USA',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'Minnesota ROKKR', years: '2019-2020'},
             { name: 'Los Angeles Guerrillas', years: '2020-2021'},
@@ -1560,7 +1560,7 @@ export const players: Player[] = [
         ign: 'MentaL',
         realName: 'Billy Putnam',
         nationality: 'USA',
-        role: 'AR',
+        role: 'SMG',
         teams: [
             { name: 'Los Angeles Guerrillas', years: '2021-2021'},
         ]
@@ -1572,7 +1572,7 @@ export const players: Player[] = [
         ign: 'JKap',
         realName: 'Jordan Kaplan',
         nationality: 'USA',
-        role: 'AR',
+        role: 'Flex',
         teams: [
             { name: 'OpTic Gaming Los Angeles', years: '2019-2020'},
         ]
@@ -1586,6 +1586,216 @@ export const players: Player[] = [
         teams: [
             { name: 'Minnesota ROKKR', years: '2019-2020'},
             { name: 'Carolina Royal Ravens', years: '2023-2024'},
+        ]
+    },
+    {
+        id: '134',
+        ign: 'ZooMaa',
+        realName: 'Thomas Paparatto',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'New York Subliners', years: '2019-2021'},
+        ]
+    },
+    {
+        id: '135',
+        ign: 'Enable',
+        realName: 'Ian Wyatt',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Seattle Surge', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '136',
+        ign: 'Lacefield',
+        realName: 'Andres Lacefield',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Los Angeles Guerrillas', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '137',
+        ign: 'Saints',
+        realName: 'Renato Forza',
+        nationality: 'Peru',
+        role: 'Flex',
+        teams: [
+            { name: 'Los Angeles Guerrillas', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '138',
+        ign: 'ACHES',
+        realName: 'Patrick Price',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Los Angeles Guerrillas', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '139',
+        ign: 'wuskin',
+        realName: 'Bradley Marshall',
+        nationality: 'UK',
+        role: 'AR',
+        teams: [
+            { name: 'London Royal Ravens', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '140',
+        ign: 'Jurd',
+        realName: 'Jordan Crowley',
+        nationality: 'Ireland',
+        role: 'SMG',
+        teams: [
+            { name: 'London Royal Ravens', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '141',
+        ign: 'Rated',
+        realName: 'Rhys Price',
+        nationality: 'Wales',
+        role: 'AR',
+        teams: [
+            { name: 'London Royal Ravens', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '142',
+        ign: 'Maux',
+        realName: 'Chance Moncivaez',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Florida Mutineers', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '143',
+        ign: 'Frosty',
+        realName: 'Bradley Bergstrom',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Florida Mutineers', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '144',
+        ign: 'Shockz',
+        realName: 'Conrad Rymarek',
+        nationality: 'Australia',
+        role: 'SMG',
+        teams: [
+            { name: 'Paris Legion', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '145',
+        ign: 'Denz',
+        realName: 'Denholm Taylor',
+        nationality: 'Australia',
+        role: 'AR',
+        teams: [
+            { name: 'Paris Legion', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '146',
+        ign: 'Louqa',
+        realName: 'Luke Rigas',
+        nationality: 'Australia',
+        role: 'AR',
+        teams: [
+            { name: 'Paris Legion', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '147',
+        ign: 'Louqa',
+        realName: 'Luke Rigas',
+        nationality: 'Australia',
+        role: 'AR',
+        teams: [
+            { name: 'Paris Legion', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '148',
+        ign: 'Pandur',
+        realName: 'Casey Romano',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Seattle Surge', years: '2020-2020'},
+        ]
+    },
+    {
+        id: '149',
+        ign: 'Karma',
+        realName: 'Damon Barlow',
+        nationality: 'Canada',
+        role: 'Flex',
+        teams: [
+            { name: 'Seattle Surge', years: '2019-2020'},
+        ]
+    },
+    {
+        id: '150',
+        ign: 'Fero',
+        realName: 'Maurice Henriquez',
+        nationality: 'USA',
+        role: 'Flex',
+        teams: [
+            { name: 'Florida Mutineers', years: '2020-2020'},
+        ]
+    },
+    {
+        id: '151',
+        ign: 'Happy',
+        realName: 'Nick Suda',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'New York Subliners', years: '2020-2020'},
+        ]
+    },
+    {
+        id: '152',
+        ign: 'Blazt',
+        realName: 'Rasim Ogresevic',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Los Angeles Guerrillas', years: '2020-2020'},
+        ]
+    },
+    {
+        id: '153',
+        ign: 'Hollow',
+        realName: 'Darien Chverchko',
+        nationality: 'USA',
+        role: 'Flex',
+        teams: [
+            { name: 'OpTic Gaming Los Angeles', years: '2020-2020'},
+        ]
+    },
+    {
+        id: '154',
+        ign: 'Proto',
+        realName: 'Nicholas Maldonado',
+        nationality: 'USA',
+        role: 'SMG',
+        teams: [
+            { name: 'Seattle Surge', years: '2020-2020'},
         ]
     },
 ]
