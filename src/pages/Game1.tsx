@@ -293,6 +293,13 @@ function Game1() {
           <h2>🎉 Correct!</h2>
           <p>You guessed <strong>{currentPlayer.ign}</strong> in {guesses.length} {guesses.length === 1 ? 'attempt' : 'attempts'}!</p>
           <p className="player-info">{currentPlayer.realName} • {currentPlayer.nationality} • {currentPlayer.role}</p>
+          {currentPlayer.id === '150' && (
+            <div className="in-memoriam">
+              <span>🕊️</span>
+              <p>In memory of Fero — Maurice Henriquez</p>
+              <p className="in-memoriam-years">2000 – 2020</p>
+            </div>
+          )}
           <div className="countdown">Next puzzle in: <strong>{countdown}</strong></div>
           <div className="action-buttons">
             <button onClick={handleShare} className="share-btn">
@@ -309,6 +316,13 @@ function Game1() {
           <h2>Game Over</h2>
           <p>The answer was: <strong>{currentPlayer.ign}</strong></p>
           <p className="player-info">{currentPlayer.realName} • {currentPlayer.nationality} • {currentPlayer.role}</p>
+          {currentPlayer.id === '150' && (
+            <div className="in-memoriam">
+              <span>🕊️</span>
+              <p>In memory of Fero — Maurice Henriquez</p>
+              <p className="in-memoriam-years">2000 – 2020</p>
+            </div>
+          )}
           <div className="all-teams">
             <h3>Full Team History:</h3>
             {currentPlayer.teams.map((team, index) => (

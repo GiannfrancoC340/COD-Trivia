@@ -299,6 +299,35 @@
   color: #99ff99;
 }
 
+.in-memoriam {
+  margin: 1.25rem auto 0.5rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.07);
+  text-align: center;
+  max-width: 360px;
+}
+
+.in-memoriam span {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.in-memoriam p {
+  margin: 0;
+  color: #d4af37;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.in-memoriam-years {
+  margin-top: 0.2rem !important;
+  font-size: 0.85rem !important;
+  opacity: 0.8;
+}
+
 .countdown {
   margin-top: 1rem;
   color: #aaa;
