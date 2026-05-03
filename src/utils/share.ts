@@ -12,7 +12,7 @@ export const copyToClipboard = async (text: string): Promise<boolean> => {
     guesses: number,
     won: boolean
   ): string => {
-    const title = 'CoD Trivia - Guess the Pro';
+    const title = 'CDL Trivia - Guess the Pro';
     const result = won ? `${guesses}/6` : 'X/6';
     
     // Generate emoji grid (one emoji per guess)
@@ -30,7 +30,7 @@ export const copyToClipboard = async (text: string): Promise<boolean> => {
     guesses: number,
     won: boolean
   ): string => {
-    const title = 'CoD Trivia - Championship Memory';
+    const title = 'CDL Trivia - Championship Memory';
     const result = won ? `${guesses}/6` : 'X/6';
     
     // Generate emoji grid

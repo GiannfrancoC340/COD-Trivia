@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# CoD Esports Trivia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A daily puzzle web app for Call of Duty esports fans. Test your knowledge of professional players and championship history in the CDL era!
 
-Currently, two official plugins are available:
+## Games
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Guess the Pro
+Identify a CDL professional player based on their team history. You have 6 attempts — each wrong guess reveals another team from their career.
 
-## React Compiler
+### Championship Memory
+Guess which team won a specific Call of Duty championship event. You have 6 attempts and team abbreviations are accepted.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Unlimited Mode
+Play as many rounds as you want with randomly selected players and events — no daily limit.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- New daily puzzle every day for both games
+- Win/loss streak tracking saved to localStorage
+- Share your results with an emoji grid
+- Statistics page with win percentage and streak history
+- Settings page with Hard Mode, No Animations, and Light/Dark Mode toggles
+- Fully responsive design
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React 19** with TypeScript
+- **React Router v7**
+- **Vite**
+- No backend — all data and state is client-side
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Command | Description |
+|---|---|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint |
+
+## Data Coverage
+
+All player and event data covers the **CDL era (2020–present)**:
+
+- Modern Warfare (2019)
+- Black Ops Cold War
+- Vanguard
+- Modern Warfare II
+- Modern Warfare III
+- Black Ops 6
+- Black Ops 7 (Current)
+
+## About
+
+Made by Giannfranco Crovetto, a Software Developer from Broward County, FL. CoD esports fan and LAT fan.

@@ -54,8 +54,8 @@ function Home() {
                 title="About"
             >
                 <p>
-                    <strong>CoD Trivia</strong> is a daily puzzle game for Call of Duty esports fans.
-                    Test your knowledge of professional players and championship history!
+                    <strong>CDL Trivia</strong> is a daily puzzle game for Call of Duty esports fans.
+                    Test your knowledge of professional players and championship history in the CDL era!
                 </p>
 
                 <h3>Two Daily Games:</h3>
@@ -84,7 +84,7 @@ function Home() {
             </Modal>
 
             <header className="home-header">
-                <h1>CoD Esports Trivia</h1>
+                <h1>Call of Duty League Trivia</h1>
                 <p className="subtitle">Daily puzzles for Call of Duty fans!</p>
                 <div className="home-header-icon-row">
                     <div className="home-header-icons">

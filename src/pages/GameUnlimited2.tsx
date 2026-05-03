@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import type { Event } from '../types';
 import { events } from '../data/events';
 import Header from '../components/Header';
@@ -6,6 +6,11 @@ import Modal from '../components/Modal';
 import Toast from '../components/Toast';
 import { updateStats, loadStats, getWinToastMessage } from '../utils/stats';
 import { copyToClipboard, generateGame2ShareText } from '../utils/share';
+import { loadSettings } from '../utils/settings';
+
+const allTeams = Array.from(
+  new Map(events.map(e => [e.winningTeam, e.acceptedAnswers])).entries()
+).map(([winningTeam, acceptedAnswers]) => ({ winningTeam, acceptedAnswers }));
 
 function GameUnlimited2() {
   const [guess, setGuess] = useState('');
@@ -19,8 +24,55 @@ function GameUnlimited2() {
   const [showCopied, setShowCopied] = useState(false);
   const [showHowToPlay, setShowHowToPlay] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [hardMode] = useState(() => loadSettings().hardMode);
+
+  const inputRef = useRef<HTMLInputElement>(null);
+  const suggestionsRef = useRef<HTMLUListElement>(null);
 
   const MAX_ATTEMPTS = 6;
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        suggestionsRef.current &&
+        !suggestionsRef.current.contains(e.target as Node) &&
+        inputRef.current &&
+        !inputRef.current.contains(e.target as Node)
+      ) {
+        setShowSuggestions(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setGuess(value);
+    if (!hardMode && value.trim().length > 0) {
+      const lower = value.toLowerCase();
+      const filtered = allTeams
+        .filter(team =>
+          team.winningTeam.toLowerCase().includes(lower) ||
+          team.acceptedAnswers.some(a => a.toLowerCase().includes(lower))
+        )
+        .map(team => team.winningTeam);
+      setSuggestions(filtered);
+      setShowSuggestions(filtered.length > 0);
+    } else {
+      setSuggestions([]);
+      setShowSuggestions(false);
+    }
+  };
+
+  const handleSuggestionClick = (teamName: string) => {
+    setGuess(teamName);
+    setSuggestions([]);
+    setShowSuggestions(false);
+    inputRef.current?.focus();
+  };
 
   const selectRandomEvent = () => {
     setCurrentEvent(events[Math.floor(Math.random() * events.length)]);
@@ -38,6 +90,8 @@ function GameUnlimited2() {
     setShowIncorrect(false);
     setShowToast(false);
     setShowCopied(false);
+    setSuggestions([]);
+    setShowSuggestions(false);
     selectRandomEvent();
   };
 
@@ -66,6 +120,8 @@ function GameUnlimited2() {
     const newGuesses = [...guesses, guess];
     setGuesses(newGuesses);
     setGuess('');
+    setSuggestions([]);
+    setShowSuggestions(false);
 
     if (isCorrect) {
       updateStats('game2-unlimited-stats', true);
@@ -136,8 +192,8 @@ function GameUnlimited2() {
         title="About"
       >
         <p>
-          <strong>CoD Trivia</strong> is a daily puzzle game for Call of Duty esports fans.
-          Test your knowledge of professional players and championship history!
+          <strong>CDL Trivia</strong> is a daily puzzle game for Call of Duty esports fans.
+          Test your knowledge of professional players and championship history in the CDL era!
         </p>
 
         <h3>Two Daily Games:</h3>
@@ -183,14 +239,28 @@ function GameUnlimited2() {
 
       {!gameOver && (
         <form onSubmit={handleGuess} className="guess-form">
-          <input
-            type="text"
-            value={guess}
-            onChange={(e) => setGuess(e.target.value)}
-            placeholder="Enter team name..."
-            className={`guess-input ${showIncorrect ? 'shake-incorrect' : ''}`}
-            autoFocus
-          />
+          <div className="autocomplete-wrapper">
+            <input
+              ref={inputRef}
+              type="text"
+              value={guess}
+              onChange={handleInputChange}
+              onFocus={() => { if (suggestions.length > 0) setShowSuggestions(true); }}
+              placeholder="Enter team name..."
+              className={`guess-input ${showIncorrect ? 'shake-incorrect' : ''}`}
+              autoComplete="off"
+              autoFocus
+            />
+            {showSuggestions && (
+              <ul className="suggestions-list" ref={suggestionsRef}>
+                {suggestions.map((team) => (
+                  <li key={team} className="suggestion-item" onMouseDown={() => handleSuggestionClick(team)}>
+                    {team}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
           <button type="submit" className="submit-btn">Submit</button>
         </form>
       )}

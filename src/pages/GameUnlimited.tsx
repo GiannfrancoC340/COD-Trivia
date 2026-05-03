@@ -169,8 +169,8 @@ function GameUnlimited() {
         title="About"
       >
         <p>
-          <strong>CoD Trivia</strong> is a daily puzzle game for Call of Duty esports fans.
-          Test your knowledge of professional players and championship history!
+          <strong>CDL Trivia</strong> is a daily puzzle game for Call of Duty esports fans.
+          Test your knowledge of professional players and championship history in the CDL era!
         </p>
 
         <h3>Two Daily Games:</h3>
