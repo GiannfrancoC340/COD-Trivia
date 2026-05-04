@@ -11,6 +11,7 @@ export interface Player {
   nationality: string;
   role: 'SMG' | 'AR' | 'Flex';
   teams: Team[];
+  wikiUrl?: string;
 }
 
 // Event types
@@ -21,6 +22,7 @@ export interface Event {
   codTitle: string;
   winningTeam: string;        // Changed from 'winner' and 'team'
   acceptedAnswers: string[];  // Array of valid answers (OpTic, OpTic Texas, OPT, etc.)
+  youtubeUrl?: string;
 }
 
 export interface Settings {

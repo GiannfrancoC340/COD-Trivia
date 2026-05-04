@@ -284,7 +284,10 @@ function GameUnlimited2() {
       {gameWon && (
         <div className="result-message success">
           <h2>🏆 Correct!</h2>
-          <p><strong>{currentEvent.winningTeam}</strong> won {currentEvent.name}!</p>
+          <p>{currentEvent.youtubeUrl
+            ? <a href={currentEvent.youtubeUrl} target="_blank" rel="noopener noreferrer" className="result-link"><strong>{currentEvent.winningTeam}</strong></a>
+            : <strong>{currentEvent.winningTeam}</strong>
+          } won {currentEvent.name}!</p>
           <p className="event-subtitle">{currentEvent.codTitle} • {currentEvent.year}</p>
           {guesses.length === 1 ? (
             <p className="perfect-guess">🔥 Perfect! First guess!</p>
@@ -303,7 +306,10 @@ function GameUnlimited2() {
       {gameOver && !gameWon && (
         <div className="result-message failure">
           <h2>Game Over</h2>
-          <p>The answer was: <strong>{currentEvent.winningTeam}</strong></p>
+          <p>The answer was: {currentEvent.youtubeUrl
+            ? <a href={currentEvent.youtubeUrl} target="_blank" rel="noopener noreferrer" className="result-link"><strong>{currentEvent.winningTeam}</strong></a>
+            : <strong>{currentEvent.winningTeam}</strong>
+          }</p>
           <p className="event-subtitle">{currentEvent.codTitle} • {currentEvent.year}</p>
           <div className="accepted-answers-info">
             <p className="hint-text">Accepted answers included: {currentEvent.acceptedAnswers.slice(0, 3).join(', ')}</p>

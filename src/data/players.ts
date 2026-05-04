@@ -21,7 +21,8 @@ export const players: Player[] = [
             { name: 'Chicago Huntsmen', years: '2019-2020' },
             { name: 'OpTic Chicago', years: '2020-2021' },
             { name: 'OpTic Texas', years: '2021-2023' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Scump'
     },
     // 2025-2026 BO7 Season
     // Boston Breach

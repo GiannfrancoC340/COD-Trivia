@@ -291,7 +291,10 @@ function Game1() {
       {gameWon && (
         <div className="result-message success">
           <h2>🎉 Correct!</h2>
-          <p>You guessed <strong>{currentPlayer.ign}</strong> in {guesses.length} {guesses.length === 1 ? 'attempt' : 'attempts'}!</p>
+          <p>You guessed {currentPlayer.wikiUrl
+            ? <a href={currentPlayer.wikiUrl} target="_blank" rel="noopener noreferrer" className="result-link"><strong>{currentPlayer.ign}</strong></a>
+            : <strong>{currentPlayer.ign}</strong>
+          } in {guesses.length} {guesses.length === 1 ? 'attempt' : 'attempts'}!</p>
           <p className="player-info">{currentPlayer.realName} • {currentPlayer.nationality} • {currentPlayer.role}</p>
           {currentPlayer.id === '150' && (
             <div className="in-memoriam">
@@ -314,7 +317,10 @@ function Game1() {
       {gameOver && !gameWon && (
         <div className="result-message failure">
           <h2>Game Over</h2>
-          <p>The answer was: <strong>{currentPlayer.ign}</strong></p>
+          <p>The answer was: {currentPlayer.wikiUrl
+            ? <a href={currentPlayer.wikiUrl} target="_blank" rel="noopener noreferrer" className="result-link"><strong>{currentPlayer.ign}</strong></a>
+            : <strong>{currentPlayer.ign}</strong>
+          }</p>
           <p className="player-info">{currentPlayer.realName} • {currentPlayer.nationality} • {currentPlayer.role}</p>
           {currentPlayer.id === '150' && (
             <div className="in-memoriam">

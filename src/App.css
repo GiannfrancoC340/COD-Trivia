@@ -338,6 +338,17 @@
   color: #667eea;
 }
 
+.result-link {
+  color: #667eea;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.result-link:hover {
+  color: #8fa8f8;
+}
+
 .result-link-btn {
   display: inline-block;
   padding: 1rem 2rem;
