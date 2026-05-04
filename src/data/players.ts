@@ -8,6 +8,7 @@ import type { Player } from '../types';
 //   nationality: string;
 //   role: string;
 //   teams: Team[];
+//   wikiUrl: string;
 // }
 
 export const players: Player[] = [
@@ -34,7 +35,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Boston Breach', years: '2023-2026' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Snoopy'
     },
     {
         id: '3',
@@ -47,7 +49,8 @@ export const players: Player[] = [
             { name: 'Minnesota ROKKR', years: '2022-2023' },
             { name: 'Los Angeles Thieves', years: '2023-2024' },
             { name: 'Boston Breach', years: '2024-2026' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Cammy'
     },
     {
         id: '4',
@@ -58,7 +61,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Las Vegas Legion', years: '2023-2024' },
             { name: 'Boston Breach', years: '2024-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Purj'
     },
     {
         id: '5',
@@ -71,7 +75,8 @@ export const players: Player[] = [
             { name: 'Los Angeles Thieves', years: '2024-2024' },
             { name: 'Vancouver Surge', years: '2024-2025' },
             { name: 'Boston Breach', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Nastie'
     },
 
     // Carolina Royal Ravens
@@ -83,7 +88,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Carolina Royal Ravens', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Craze'
     },
     {
         id: '7',
@@ -93,7 +99,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Carolina Royal Ravens', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Lurqxx'
     },
     {
         id: '8',
@@ -107,7 +114,8 @@ export const players: Player[] = [
             { name: 'Minnesota ROKKR', years: '2024-2025'},
             { name: 'Carolina Royal Ravens', years: '2025-2026' },
             { name: 'Vancouver Surge', years: '2026-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Nero'
     },
     {
         id: '9',
@@ -119,7 +127,8 @@ export const players: Player[] = [
             { name: 'Minnesota ROKKR', years: '2019-2020'},
             { name: 'Los Angeles Guerrillas', years: '2023-2023'},
             { name: 'Carolina Royal Ravens', years: '2026-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Exceed'
     },
     {
         id: '10',
@@ -134,7 +143,8 @@ export const players: Player[] = [
             { name: 'Atlanta FaZe', years: '2022-2023'},
             { name: 'Boston Breach', years: '2023-2024'},
             { name: 'Carolina Royal Ravens', years: '2024-2026' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/SlasheR'
     },
 
     // Cloud9 New York
@@ -150,7 +160,8 @@ export const players: Player[] = [
             { name: 'Los Angeles Thieves', years: '2023-2024'},
             { name: 'Cloud9 New York', years: '2025-2026' },
             { name: 'Boston Breach', years: '2026-'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Afro'
     },
     {
         id: '12',
@@ -163,7 +174,8 @@ export const players: Player[] = [
             { name: 'Carolina Royal Ravens', years: '2024-2024'},
             { name: 'Toronto Ultra', years: '2024-2025'},
             { name: 'Cloud9 New York', years: '2025-2026' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Beans'
     },
     {
         id: '13',
@@ -175,7 +187,8 @@ export const players: Player[] = [
             { name: 'New York Subliners', years: '2020-2021'},
             { name: 'Seattle Surge', years: '2021-2023'},
             { name: 'Cloud9 New York', years: '2024-2026' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Mack'
     },
     {
         id: '14',
@@ -191,7 +204,8 @@ export const players: Player[] = [
             { name: 'Minnesota ROKKR', years: '2023-2024'},
             { name: 'Carolina Royal Ravens', years: '2024-2025'},
             { name: 'Cloud9 New York', years: '2025-2026' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Vivid'
     },
 
     // FaZe Vegas
@@ -204,7 +218,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Atlanta FaZe', years: '2019-2025'},
             { name: 'FaZe Vegas', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Simp'
     },
     {
         id: '16',
@@ -216,7 +231,8 @@ export const players: Player[] = [
             { name: 'Seattle Surge', years: '2023-2024'},
             { name: 'Vancouver Surge', years: '2024-2025'},
             { name: 'FaZe Vegas', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Abuzah'
     },
     {
         id: '17',
@@ -228,7 +244,8 @@ export const players: Player[] = [
             { name: 'Seattle Surge', years: '2024-2024'},
             { name: 'Vancouver Surge', years: '2024-2025'},
             { name: 'FaZe Vegas', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/04'
     },
     {
         id: '18',
@@ -241,7 +258,8 @@ export const players: Player[] = [
             { name: 'Los Angeles Thieves', years: '2020-2023'},
             { name: 'Atlanta FaZe', years: '2023-2025'},
             { name: 'FaZe Vegas', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Drazah'
     },
 
     // G2 Minnesota
@@ -255,7 +273,8 @@ export const players: Player[] = [
             { name: 'Los Angeles Guerrillas', years: '2023-2024'},
             { name: 'Minnesota ROKKR', years: '2024-2025'},
             { name: 'G2 Minnesota', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Estreal'
     },
     {
         id: '20',
@@ -268,7 +287,8 @@ export const players: Player[] = [
             { name: 'Los Angeles Thieves', years: '2024-2024'},
             { name: 'Cloud9 New York', years: '2024-2025'},
             { name: 'G2 Minnesota', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Kremp'
     },
     {
         id: '21',
@@ -278,7 +298,8 @@ export const players: Player[] = [
         role: 'Flex',
         teams: [
             { name: 'G2 Minnesota', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Mamba'
     },
     {
         id: '22',
@@ -292,7 +313,8 @@ export const players: Player[] = [
             { name: 'Los Angeles Guerrillas M8', years: '2024-2025'},
             { name: 'OpTic Texas', years: '2025-2025'},
             { name: 'G2 Minnesota', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Skyz'
     },
 
     // Los Angeles Thieves
@@ -305,7 +327,8 @@ export const players: Player[] = [
         teams: [
             { name: 'New York Subliners', years: '2020-2024'},
             { name: 'Los Angeles Thieves', years: '2024-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/HyDra'
     },
     {
         id: '24',
@@ -316,7 +339,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Toronto Ultra', years: '2022-2024'},
             { name: 'Los Angeles Thieves', years: '2024-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Scrap'
     },
     {
         id: '25',
@@ -330,7 +354,8 @@ export const players: Player[] = [
             { name: 'OpTic Texas', years: '2023-2025'},
             { name: 'Minnesota ROKKR', years: '2025-2025'},
             { name: 'Los Angeles Thieves', years: '2025-2026' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Kenny'
     },
     {
         id: '26',
@@ -341,7 +366,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Atlanta FaZe', years: '2019-2025'},
             { name: 'Los Angeles Thieves', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/ABeZy'
     },
 
     // Miami Heretics
@@ -354,7 +380,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Toronto Ultra', years: '2019-2020'},
             { name: 'Miami Heretics', years: '2023-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/MettalZ'
     },
     {
         id: '28',
@@ -364,7 +391,8 @@ export const players: Player[] = [
         role: 'Flex',
         teams: [
             { name: 'Miami Heretics', years: '2024-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/SupeR_(Diego_Escudero)'
     },
     {
         id: '29',
@@ -374,7 +402,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Miami Heretics', years: '2024-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/RenKoR'
     },
     {
         id: '30',
@@ -384,7 +413,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Miami Heretics', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Traixx'
     },
 
     // OpTic Texas
@@ -397,7 +427,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Dallas Empire', years: '2019-2021'},
             { name: 'OpTic Texas', years: '2021-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Shotzzy'
     },
     {
         id: '32',
@@ -409,7 +440,8 @@ export const players: Player[] = [
             { name: 'OpTic Gaming Los Angeles', years: '2019-2020'},
             { name: 'OpTic Chicago', years: '2020-2021'},
             { name: 'OpTic Texas', years: '2021-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Dashy'
     },
     {
         id: '33',
@@ -424,7 +456,8 @@ export const players: Player[] = [
             { name: 'OpTic Texas', years: '2023-2023'},
             { name: 'Seattle Surge', years: '2023-2024'},
             { name: 'OpTic Texas', years: '2024-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Huke'
     },
     {
         id: '34',
@@ -435,7 +468,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Toronto Ultra', years: '2025-2025'},
             { name: 'OpTic Texas', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Mercules'
     },
 
     // Paris Gentlemates
@@ -450,7 +484,8 @@ export const players: Player[] = [
             { name: 'New York Subliners', years: '2023-2024'},
             { name: 'Cloud9 New York', years: '2024-2025'},
             { name: 'Paris Gentlemates', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Sib'
     },
     {
         id: '36',
@@ -465,7 +500,8 @@ export const players: Player[] = [
             { name: 'Toronto Ultra', years: '2023-2024'},
             { name: 'Los Angeles Thieves', years: '2024-2025'},
             { name: 'Paris Gentlemates', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Envoy'
     },
     {
         id: '37',
@@ -477,7 +513,8 @@ export const players: Player[] = [
             { name: 'OpTic Texas', years: '2023-2023'},
             { name: 'Los Angeles Thieves', years: '2023-2025'},
             { name: 'Paris Gentlemates', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Ghosty'
     },
     {
         id: '38',
@@ -491,7 +528,8 @@ export const players: Player[] = [
             { name: 'Los Angeles Guerrillas', years: '2022-2023'},
             { name: 'Vancouver Surge', years: '2025-2025'},
             { name: 'Paris Gentlemates', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Neptune'
     },
 
     // Riyadh Falcons
@@ -506,7 +544,8 @@ export const players: Player[] = [
             { name: 'OpTic Texas', years: '2023-2025'},
             { name: 'Las Vegas Falcons', years: '2025-2025'},
             { name: 'Riyadh Falcons', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Pred'
     },
     {
         id: '40',
@@ -517,7 +556,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Las Vegas Falcons', years: '2024-2025'},
             { name: 'Riyadh Falcons', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Exnid'
     },
     {
         id: '41',
@@ -530,7 +570,8 @@ export const players: Player[] = [
             { name: 'New York Subliners', years: '2022-2024'},
             { name: 'Los Angeles Guerrillas M8', years: '2024-2025'},
             { name: 'Riyadh Falcons', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/KiSMET'
     },
     {
         id: '42',
@@ -541,7 +582,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Atlanta FaZe', years: '2019-2025'},
             { name: 'Riyadh Falcons', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Cellium'
     },
 
     // Toronto KOI
@@ -554,7 +596,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Toronto Ultra', years: '2019-2025'},
             { name: 'Toronto KOI', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/CleanX'
     },
     {
         id: '44',
@@ -565,7 +608,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Toronto Ultra', years: '2020-2025'},
             { name: 'Toronto KOI', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Insight'
     },
     {
         id: '45',
@@ -577,7 +621,8 @@ export const players: Player[] = [
             { name: 'Carolina Royal Ravens', years: '2023-2024'},
             { name: 'Miami Heretics', years: '2024-2025'},
             { name: 'Toronto KOI', years: '2025-2026' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/ReeaL'
     },
     {
         id: '46',
@@ -590,7 +635,8 @@ export const players: Player[] = [
             { name: 'Los Angeles Thieves', years: '2023-2024'},
             { name: 'Toronto Ultra', years: '2024-2025'},
             { name: 'Toronto KOI', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/JoeDeceives'
     },
 
     // Vancouver Surge
@@ -603,7 +649,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Toronto Ultra', years: '2025-2025'},
             { name: 'Vancouver Surge', years: '2025-2026' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Abe'
     },
     {
         id: '48',
@@ -614,7 +661,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Los Angeles Guerrillas M8', years: '2025-2025'},
             { name: 'Vancouver Surge', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Lunarz'
     },
     {
         id: '49',
@@ -626,7 +674,8 @@ export const players: Player[] = [
             { name: 'Carolina Royal Ravens', years: '2023-2025'},
             { name: 'Cloud9 New York', years: '2025-2025'},
             { name: 'Vancouver Surge', years: '2025-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Gwinn'
     },
     {
         id: '50',
@@ -642,7 +691,8 @@ export const players: Player[] = [
             { name: 'Carolina Royal Ravens', years: '2024-2025'},
             { name: 'Las Vegas Falcons', years: '2025-2025'},
             { name: 'Vancouver Surge', years: '2026-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/TJHaLy'
     },
     {
         id: '51',
@@ -652,7 +702,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Vancouver Surge', years: '2025-2026' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Lqgend'
     },
 
     // Substitutes
@@ -664,7 +715,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Los Angeles Thieves', years: '2026-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Nium'
     },
     {
         id: '53',
@@ -674,7 +726,8 @@ export const players: Player[] = [
         role: 'Flex',
         teams: [
             { name: 'Toronto KOI', years: '2026-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Kips'
     },
     {
         id: '54',
@@ -688,7 +741,8 @@ export const players: Player[] = [
             { name: 'Boston Breach', years: '2023-2024'},
             { name: 'Cloud9 New York', years: '2025-2025'},
             { name: 'Vancouver Surge', years: '2026-2026' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Capsidal'
     },
     {
         id: '55',
@@ -697,10 +751,11 @@ export const players: Player[] = [
         nationality: 'USA',
         role: 'AR',
         teams: [
-            { name: 'Los Angeles Guerrillas', years: '2021-2023'},
+            { name: 'Los Angeles Guerrillas', years: '2020-2023'},
             { name: 'Cloud9 New York', years: '2025-2025'},
             { name: 'Boston Breach', years: '2026-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Spart'
     },
     {
         id: '103',
@@ -711,7 +766,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Paris Legion', years: '2020-2021'},
             { name: 'Carolina Royal Ravens', years: '2026-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Fire'
     },
     {
         id: '104',
@@ -721,7 +777,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Cloud9 New York', years: '2026-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Nejra'
     },
     {
         id: '105',
@@ -731,7 +788,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Cloud9 New York', years: '2026-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Okis'
     },
     {
         id: '106',
@@ -741,7 +799,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Cloud9 New York', years: '2026-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Encourage'
     },
     {
         id: '107',
@@ -751,7 +810,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Cloud9 New York', years: '2026-' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Hide'
     },
 
     // 2024-2025 BO6 season
@@ -766,7 +826,8 @@ export const players: Player[] = [
             { name: 'Boston Breach', years: '2022-2023'},
             { name: 'Minnesota ROKKR', years: '2023-2024'},
             { name: 'Boston Breach', years: '2024-2025' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Owakening'
     },
     {
         id: '57',
@@ -777,7 +838,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Minnesota ROKKR', years: '2023-2024'},
             { name: 'Los Angeles Guerrillas M8', years: '2024-2025' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Lynz'
     },
     {
         id: '58',
@@ -792,7 +854,8 @@ export const players: Player[] = [
             { name: 'Boston Breach', years: '2023-2024'},
             { name: 'Los Angeles Guerrillas M8', years: '2024-2025' },
             { name: 'Las Vegas Falcons', years: '2025-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Priestahh'
     },
     {
         id: '59',
@@ -805,7 +868,8 @@ export const players: Player[] = [
             { name: 'Minnesota ROKKR', years: '2020-2023'},
             { name: 'Las Vegas Legion', years: '2023-2024'},
             { name: 'Cloud9 New York', years: '2024-2025' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Attach'
     },
     {
         id: '60',
@@ -816,7 +880,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Las Vegas Legion', years: '2024-2024'},
             { name: 'Minnesota ROKKR', years: '2024-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Gio'
     },
     {
         id: '61',
@@ -829,7 +894,8 @@ export const players: Player[] = [
             { name: 'New York Subliners', years: '2022-2022'},
             { name: 'London Royal Ravens', years: '2022-2023'},
             { name: 'Minnesota ROKKR', years: '2024-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/PaulEhx'
     },
     {
         id: '62',
@@ -840,7 +906,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Toronto Ultra', years: '2019-2020'},
             { name: 'Miami Heretics', years: '2023-2025' }
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Lucky_(Alejandro_L%C3%B3pez)'
     },
     {
         id: '63',
@@ -851,7 +918,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Toronto Ultra', years: '2022-2023'},
             { name: 'Vancouver Surge', years: '2024-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Hicksy'
     },
     {
         id: '64',
@@ -861,7 +929,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Las Vegas Falcons', years: '2024-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Roxas'
     },
     {
         id: '65',
@@ -871,7 +940,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Las Vegas Falcons', years: '2024-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/KingAbody'
     },
     {
         id: '66',
@@ -881,7 +951,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Las Vegas Falcons', years: '2024-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Khhx'
     },
     {
         id: '67',
@@ -891,7 +962,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Las Vegas Falcons', years: '2024-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/D7oom'
     },
     {
         id: '68',
@@ -901,7 +973,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Las Vegas Falcons', years: '2024-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/KiinG'
     },
     {
         id: '70',
@@ -911,7 +984,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Las Vegas Falcons', years: '2024-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/WXSL'
     },
     {
         id: '71',
@@ -925,7 +999,8 @@ export const players: Player[] = [
             { name: 'Los Angeles Guerrillas', years: '2022-2023'},
             { name: 'Seattle Surge', years: '2023-2024'},
             { name: 'Las Vegas Falcons', years: '2025-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Arcitys'
     },
     {
         id: '72',
@@ -939,7 +1014,8 @@ export const players: Player[] = [
             { name: 'Florida Mutineers', years: '2023-2023'},
             { name: 'Carolina Royal Ravens', years: '2024-2024'},
             { name: 'Los Angeles Guerrillas M8', years: '2025-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/FeLo'
     },
     {
         id: '73',
@@ -951,7 +1027,8 @@ export const players: Player[] = [
             { name: 'Paris Legion', years: '2022-2022'},
             { name: 'Las Vegas Legion', years: '2024-2024'},
             { name: 'Los Angeles Guerrillas M8', years: '2025-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/OJohnny'
     },
     {
         id: '74',
@@ -961,7 +1038,8 @@ export const players: Player[] = [
         role: 'Flex',
         teams: [
             { name: 'Carolina Royal Ravens', years: '2025-2025'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Wrecks'
     },
     
     // 2023-2024 MW3 Season
@@ -974,7 +1052,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Florida Mutineers', years: '2022-2023'},
             { name: 'Miami Heretics', years: '2023-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Vikul'
     },
     {
         id: '76',
@@ -984,7 +1063,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Miami Heretics', years: '2023-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/JurNii'
     },
     {
         id: '77',
@@ -996,7 +1076,8 @@ export const players: Player[] = [
             { name: 'Minnesota ROKKR', years: '2019-2020'},
             { name: 'Los Angeles Guerrillas', years: '2020-2021'},
             { name: 'Los Angeles Guerrillas', years: '2023-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Assault'
     },
     {
         id: '78',
@@ -1007,7 +1088,8 @@ export const players: Player[] = [
         teams: [
             { name: 'New York Subliners', years: '2021-2021'},
             { name: 'Los Angeles Guerrillas', years: '2023-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Diamondcon'
     },
     {
         id: '79',
@@ -1018,7 +1100,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Minnesota ROKKR', years: '2022-2023'},
             { name: 'Los Angeles Guerrillas', years: '2023-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Fame'
     },
     {
         id: '80',
@@ -1030,7 +1113,8 @@ export const players: Player[] = [
             { name: 'Dallas Empire', years: '2019-2021'},
             { name: 'OpTic Texas', years: '2021-2023'},
             { name: 'Seattle Surge', years: '2023-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/ILLeY'
     },
     {
         id: '81',
@@ -1043,7 +1127,8 @@ export const players: Player[] = [
             { name: 'Minnesota ROKKR', years: '2020-2021'},
             { name: 'Seattle Surge', years: '2021-2023'},
             { name: 'Minnesota ROKKR', years: '2023-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Accuracy'
     },
     {
         id: '82',
@@ -1056,7 +1141,8 @@ export const players: Player[] = [
             { name: 'New York Subliners', years: '2020-2022'},
             { name: 'Las Vegas Legion', years: '2022-2023'},
             { name: 'Carolina Royal Ravens', years: '2023-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Clayster'
     },
     {
         id: '83',
@@ -1069,7 +1155,8 @@ export const players: Player[] = [
             { name: 'Toronto Ultra', years: '2022-2023'},
             { name: 'Las Vegas Legion', years: '2023-2024'},
             { name: 'Minnesota ROKKR', years: '2024-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Standy'
     },
     {
         id: '84',
@@ -1079,7 +1166,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Miami Heretics', years: '2024-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/EriKBooM'
     },
     {
         id: '85',
@@ -1094,7 +1182,8 @@ export const players: Player[] = [
             { name: 'London Royal Ravens', years: '2022-2023'},
             { name: 'Boston Breach', years: '2024-2024'},
             { name: 'Las Vegas Legion', years: '2024-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Asim'
     },
     {
         id: '86',
@@ -1105,7 +1194,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Paris Legion', years: '2019-2020'},
             { name: 'Seattle Surge', years: '2024-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Breszy'
     },
     {
         id: '87',
@@ -1118,7 +1208,8 @@ export const players: Player[] = [
             { name: 'Seattle Surge', years: '2020-2021'},
             { name: 'Los Angeles Guerrillas', years: '2021-2022'},
             { name: 'Minnesota ROKKR', years: '2024-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Gunless'
     },
     {
         id: '88',
@@ -1128,7 +1219,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Los Angeles Guerrillas', years: '2024-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Flames'
     },
     {
         id: '89',
@@ -1138,7 +1230,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Boston Breach', years: '2024-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Pentagrxm'
     },
     {
         id: '90',
@@ -1151,7 +1244,8 @@ export const players: Player[] = [
             { name: 'Minnesota ROKKR', years: '2020-2022'},
             { name: 'Florida Mutineers', years: '2022-2023'},
             { name: 'Boston Breach', years: '2024-2024'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/MajorManiak'
     },
 
     // 2022-2023 MW2 Season
@@ -1164,7 +1258,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Toronto Ultra', years: '2019-2022'},
             { name: 'Minnesota ROKKR', years: '2022-2023'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Bance'
     },
     {
         id: '92',
@@ -1177,7 +1272,8 @@ export const players: Player[] = [
             { name: 'Los Angeles Thieves', years: '2020-2021'},
             { name: 'Paris Legion', years: '2021-2022'},
             { name: 'Las Vegas Legion', years: '2022-2023'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Temp'
     },
     {
         id: '93',
@@ -1189,7 +1285,8 @@ export const players: Player[] = [
             { name: 'Florida Mutineers', years: '2019-2021'},
             { name: 'Minnesota ROKKR', years: '2022-2022'},
             { name: 'Florida Mutineers', years: '2022-2023'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Havok'
     },
     {
         id: '94',
@@ -1200,7 +1297,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Toronto Ultra', years: '2019-2020'},
             { name: 'Florida Mutineers', years: '2022-2023'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Brack'
     },
     {
         id: '95',
@@ -1212,7 +1310,8 @@ export const players: Player[] = [
             { name: 'London Royal Ravens', years: '2019-2020'},
             { name: 'Paris Legion', years: '2020-2021'},
             { name: 'London Royal Ravens', years: '2022-2023'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Skrapz'
     },
     {
         id: '96',
@@ -1222,7 +1321,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'London Royal Ravens', years: '2023-2023'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Uli'
     },
     {
         id: '97',
@@ -1233,7 +1333,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Seattle Surge', years: '2019-2021'},
             { name: 'Los Angeles Thieves', years: '2021-2023'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Octane'
     },
     {
         id: '98',
@@ -1244,7 +1345,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Toronto Ultra', years: '2019-2021'},
             { name: 'Boston Breach', years: '2022-2023'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Methodz_(Anthony_Zinni)'
     },
     {
         id: '99',
@@ -1256,7 +1358,8 @@ export const players: Player[] = [
             { name: 'New York Subliners', years: '2019-2020'},
             { name: 'London Royal Ravens', years: '2020-2020'},
             { name: 'London Royal Ravens', years: '2021-2023'}
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Zer0'
     },
     {
         id: '100',
@@ -1267,7 +1370,8 @@ export const players: Player[] = [
         teams: [
             { name: 'OpTic Texas', years: '2022-2022'},
             { name: 'Las Vegas Legion', years: '2022-2023'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Prolute'
     },
     {
         id: '101',
@@ -1278,7 +1382,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Florida Mutineers', years: '2021-2022'},
             { name: 'Florida Mutineers', years: '2023-2023'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Davpadie'
     },
     {
         id: '102',
@@ -1289,7 +1394,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Florida Mutineers', years: '2022-2022'},
             { name: 'Las Vegas Legion', years: '2023-2023'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/2ReaL'
     },
 
     // 2021-2022 Vanguard Season
@@ -1302,7 +1408,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Dallas Empire', years: '2019-2021'},
             { name: 'New York Subliners', years: '2021-2022'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Crimsix'
     },
     {
         id: '108',
@@ -1315,7 +1422,8 @@ export const players: Player[] = [
             { name: 'Chicago Huntsmen', years: '2020-2020'},
             { name: 'Seattle Surge', years: '2020-2021'},
             { name: 'Atlanta FaZe', years: '2021-2022'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Prestinni'
     },
     {
         id: '109',
@@ -1325,7 +1433,8 @@ export const players: Player[] = [
         role: 'Flex',
         teams: [
             { name: 'London Royal Ravens', years: '2021-2022'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Gismo'
     },
     {
         id: '110',
@@ -1335,7 +1444,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'London Royal Ravens', years: '2022-2022'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Harry'
     },
     {
         id: '111',
@@ -1345,7 +1455,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Paris Legion', years: '2022-2022'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/GRVTY'
     },
     {
         id: '112',
@@ -1356,7 +1467,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Chicago Huntsmen', years: '2020-2020'},
             { name: 'OpTic Texas', years: '2022-2022'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/General'
     },
     {
         id: '113',
@@ -1367,7 +1479,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Los Angeles Thieves', years: '2021-2021'},
             { name: 'Paris Legion', years: '2021-2022'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/John'
     },
     {
         id: '114',
@@ -1377,7 +1490,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'New York Subliners', years: '2022-2022'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Royalty'
     },
 
     // 2020-2021 Cold War Season
@@ -1391,7 +1505,8 @@ export const players: Player[] = [
             { name: 'Toronto Ultra', years: '2019-2020'},
             { name: 'Paris Legion', years: '2020-2021'},
             { name: 'Seattle Surge', years: '2021-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Classic'
     },
     {
         id: '116',
@@ -1402,7 +1517,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Toronto Ultra', years: '2019-2020'},
             { name: 'Seattle Surge', years: '2020-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Loony'
     },
     {
         id: '117',
@@ -1412,7 +1528,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'London Royal Ravens', years: '2019-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Seany'
     },
     {
         id: '118',
@@ -1423,7 +1540,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Paris Legion', years: '2019-2020'},
             { name: 'London Royal Ravens', years: '2021-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Zed'
     },
     {
         id: '119',
@@ -1434,7 +1552,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Minnesota ROKKR', years: '2019-2020'},
             { name: 'London Royal Ravens', years: '2020-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Alexx'
     },
     {
         id: '120',
@@ -1444,7 +1563,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'London Royal Ravens', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Dylan'
     },
     {
         id: '121',
@@ -1455,7 +1575,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Seattle Surge', years: '2019-2020'},
             { name: 'Los Angeles Guerrillas', years: '2020-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Apathy'
     },
     {
         id: '122',
@@ -1466,7 +1587,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Minnesota ROKKR', years: '2019-2020'},
             { name: 'Los Angeles Guerrillas', years: '2020-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/SiLLY'
     },
     {
         id: '123',
@@ -1477,7 +1599,8 @@ export const players: Player[] = [
         teams: [
             { name: 'OpTic Gaming Los Angeles', years: '2019-2020'},
             { name: 'Los Angeles Guerrillas', years: '2021-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Cheen'
     },
     {
         id: '124',
@@ -1488,7 +1611,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Los Angeles Guerrillas', years: '2019-2020'},
             { name: 'Paris Legion', years: '2020-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/AquA'
     },
     {
         id: '125',
@@ -1499,7 +1623,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Seattle Surge', years: '2019-2020'},
             { name: 'Florida Mutineers', years: '2020-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Slacked'
     },
     {
         id: '126',
@@ -1510,7 +1635,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Chicago Huntsmen', years: '2019-2020'},
             { name: 'OpTic Chicago', years: '2020-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/FormaL'
     },
     {
         id: '127',
@@ -1523,7 +1649,8 @@ export const players: Player[] = [
             { name: 'Seattle Surge', years: '2021-2021'},
             { name: 'New York Subliners', years: '2021-2021'},
             { name: 'Paris Legion', years: '2021-2022'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Decemate'
     },
     {
         id: '128',
@@ -1534,7 +1661,8 @@ export const players: Player[] = [
         teams: [
             { name: 'London Royal Ravens', years: '2021-2021'},
             { name: 'Paris Legion', years: '2021-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Zaptius'
     },
     {
         id: '129',
@@ -1544,7 +1672,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Los Angeles Thieves', years: '2021-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Venom'
     },
     {
         id: '130',
@@ -1554,7 +1683,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'London Royal Ravens', years: '2021-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Parasite'
     },
     {
         id: '131',
@@ -1564,7 +1694,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Los Angeles Guerrillas', years: '2021-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/MentaL'
     },
 
     // 2019-2020 MW19 Season
@@ -1576,7 +1707,8 @@ export const players: Player[] = [
         role: 'Flex',
         teams: [
             { name: 'OpTic Gaming Los Angeles', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/JKap'
     },
     {
         id: '133',
@@ -1587,7 +1719,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Minnesota ROKKR', years: '2019-2020'},
             { name: 'Carolina Royal Ravens', years: '2023-2024'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/GodRx'
     },
     {
         id: '134',
@@ -1597,7 +1730,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'New York Subliners', years: '2019-2021'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/ZooMaa'
     },
     {
         id: '135',
@@ -1607,7 +1741,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Seattle Surge', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Enable'
     },
     {
         id: '136',
@@ -1617,7 +1752,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Los Angeles Guerrillas', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Lacefield'
     },
     {
         id: '137',
@@ -1627,7 +1763,8 @@ export const players: Player[] = [
         role: 'Flex',
         teams: [
             { name: 'Los Angeles Guerrillas', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Saints'
     },
     {
         id: '138',
@@ -1637,7 +1774,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Los Angeles Guerrillas', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/ACHES'
     },
     {
         id: '139',
@@ -1647,7 +1785,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'London Royal Ravens', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Wuskin'
     },
     {
         id: '140',
@@ -1657,7 +1796,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'London Royal Ravens', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Jurd'
     },
     {
         id: '141',
@@ -1667,7 +1807,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'London Royal Ravens', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Rated'
     },
     {
         id: '142',
@@ -1677,7 +1818,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Florida Mutineers', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Maux'
     },
     {
         id: '143',
@@ -1687,7 +1829,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Florida Mutineers', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Frosty'
     },
     {
         id: '144',
@@ -1697,7 +1840,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Paris Legion', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Shockz'
     },
     {
         id: '145',
@@ -1707,7 +1851,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Paris Legion', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Denz'
     },
     {
         id: '146',
@@ -1717,7 +1862,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Paris Legion', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Louqa'
     },
     {
         id: '148',
@@ -1727,7 +1873,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Seattle Surge', years: '2020-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Pandur'
     },
     {
         id: '149',
@@ -1737,7 +1884,8 @@ export const players: Player[] = [
         role: 'Flex',
         teams: [
             { name: 'Seattle Surge', years: '2019-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Karma'
     },
     {
         id: '150',
@@ -1747,7 +1895,8 @@ export const players: Player[] = [
         role: 'Flex',
         teams: [
             { name: 'Florida Mutineers', years: '2020-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Fero'
     },
     {
         id: '151',
@@ -1757,7 +1906,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'New York Subliners', years: '2020-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Happy'
     },
     {
         id: '152',
@@ -1767,7 +1917,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'Los Angeles Guerrillas', years: '2020-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Blazt'
     },
     {
         id: '153',
@@ -1777,7 +1928,8 @@ export const players: Player[] = [
         role: 'AR',
         teams: [
             { name: 'OpTic Gaming Los Angeles', years: '2020-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Hollow'
     },
     {
         id: '154',
@@ -1787,6 +1939,7 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Seattle Surge', years: '2020-2020'},
-        ]
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Proto'
     },
 ]
