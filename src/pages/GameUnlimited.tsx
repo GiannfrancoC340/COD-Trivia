@@ -269,7 +269,12 @@ function GameUnlimited() {
           <p>You guessed {currentPlayer.wikiUrl
             ? <a href={currentPlayer.wikiUrl} target="_blank" rel="noopener noreferrer" className="result-link"><strong>{currentPlayer.ign}</strong></a>
             : <strong>{currentPlayer.ign}</strong>
-          } in {guesses.length} {guesses.length === 1 ? 'attempt' : 'attempts'}!</p>
+          }!</p>
+          {guesses.length === 1 ? (
+            <p className="perfect-guess">🔥 Perfect! First guess!</p>
+          ) : (
+            <p>Got it in {guesses.length} attempts!</p>
+          )}
           <p className="player-info">{currentPlayer.realName} • {currentPlayer.nationality} • {currentPlayer.role}</p>
           {currentPlayer.id === '150' && (
             <div className="in-memoriam">
