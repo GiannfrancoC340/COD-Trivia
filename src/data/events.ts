@@ -198,6 +198,15 @@ export const events: Event[] = [
     acceptedAnswers: ['vegas faze', 'faze', 'vegas', 'vgs', 'faze vegas'],
     youtubeUrl: 'https://youtu.be/K1_-qUo3FzY?si=snH-sqmOZ0VXodkh'
   },
+  {
+    id: '47',
+    name: 'Major 3',
+    year: 2026,
+    codTitle: 'Black Ops 7',
+    winningTeam: 'Los Angeles Thieves',
+    acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves'],
+    youtubeUrl: 'https://youtu.be/Ew6mHrMBeAg?si=I_o3e8dl7FK3YH1j'
+  },
 
   // 2021-2022 Vanguard Season
   {
