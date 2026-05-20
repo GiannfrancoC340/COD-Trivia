@@ -4,7 +4,7 @@ A daily puzzle web app for Call of Duty esports fans. CoD Esports Trivia lets us
 
 ## Live Demo
 
-[View the live app](https://cod-trivia.vercel.app)
+[View the live app](https://cdl-trivia.vercel.app/)
 
 ## Overview
 
