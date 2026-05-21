@@ -3,8 +3,9 @@ import { players } from '../data/players';
 import { events } from '../data/events';
 
 const getDaysSinceEpoch = (date: Date): number => {
-  const epoch = new Date('2025-01-01');
-  const diff = date.getTime() - epoch.getTime();
+  const epoch = new Date(2025, 0, 1); // Jan 1 2025, local midnight
+  const localDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  const diff = localDate.getTime() - epoch.getTime();
   return Math.floor(diff / (1000 * 60 * 60 * 24));
 };
 
