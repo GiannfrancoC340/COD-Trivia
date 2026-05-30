@@ -280,7 +280,7 @@ function GameUnlimited() {
             <div className="in-memoriam">
               <span>🕊️</span>
               <p>In memory of Fero — Maurice Henriquez</p>
-              <p className="in-memoriam-years">2000 – 2020</p>
+              <p className="in-memoriam-years">1999 – 2020</p>
             </div>
           )}
           <div className="action-buttons">

@@ -1923,7 +1923,7 @@ export const players: Player[] = [
         nationality: 'USA',
         role: 'AR',
         teams: [
-            { name: 'Cloud9 New York', years: '2026-' }
+            { name: 'Cloud9 New York', years: '2026-2026' }
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Okis'
     },
@@ -1948,5 +1948,16 @@ export const players: Player[] = [
             { name: 'Cloud9 New York', years: '2026-' }
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Hide'
+    },
+    {
+        id: '154',
+        ign: 'Wevy',
+        realName: 'Jason Medina',
+        nationality: 'USA',
+        role: 'AR',
+        teams: [
+            { name: 'Cloud9 New York', years: '2026-' }
+        ],
+        wikiUrl: 'https://cod-esports.fandom.com/wiki/Wevy'
     },
 ]
