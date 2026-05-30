@@ -276,7 +276,7 @@ function GameUnlimited() {
             <p>Got it in {guesses.length} attempts!</p>
           )}
           <p className="player-info">{currentPlayer.realName} • {currentPlayer.nationality} • {currentPlayer.role}</p>
-          {currentPlayer.id === '150' && (
+          {currentPlayer.ign === 'Fero' && (
             <div className="in-memoriam">
               <span>🕊️</span>
               <p>In memory of Fero — Maurice Henriquez</p>
@@ -300,7 +300,7 @@ function GameUnlimited() {
             : <strong>{currentPlayer.ign}</strong>
           }</p>
           <p className="player-info">{currentPlayer.realName} • {currentPlayer.nationality} • {currentPlayer.role}</p>
-          {currentPlayer.id === '150' && (
+          {currentPlayer.ign === 'Fero' && (
             <div className="in-memoriam">
               <span>🕊️</span>
               <p>In memory of Fero — Maurice Henriquez</p>
