@@ -272,7 +272,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Los Angeles Guerrillas', years: '2023-2024'},
             { name: 'Minnesota ROKKR', years: '2024-2025'},
-            { name: 'G2 Minnesota', years: '2025-' }
+            { name: 'G2 Minnesota', years: '2025-2026' },
+            { name: 'Paris Gentlemates', years: '2026s-' }
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Estreal'
     },
