@@ -447,6 +447,4 @@ export const events: Event[] = [
     acceptedAnswers: ['los angeles thieves', 'thieves', 'lat', 'la thieves'],
     youtubeUrl: 'https://youtu.be/Ew6mHrMBeAg?si=I_o3e8dl7FK3YH1j'
   },
-
-
 ];

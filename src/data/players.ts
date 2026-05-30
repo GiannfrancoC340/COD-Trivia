@@ -1949,6 +1949,4 @@ export const players: Player[] = [
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Hide'
     },
-
-
 ]
