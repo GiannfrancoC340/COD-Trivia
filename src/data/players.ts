@@ -74,7 +74,8 @@ export const players: Player[] = [
             { name: 'London Royal Ravens', years: '2021-2023' },
             { name: 'Los Angeles Thieves', years: '2024-2024' },
             { name: 'Vancouver Surge', years: '2024-2025' },
-            { name: 'Boston Breach', years: '2025-' }
+            { name: 'Boston Breach', years: '2025-2026' },
+            { name: 'G2 Minnesota', years: '2026-'}
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Nastie'
     },
@@ -87,7 +88,8 @@ export const players: Player[] = [
         nationality: 'USA',
         role: 'SMG',
         teams: [
-            { name: 'Carolina Royal Ravens', years: '2025-' }
+            { name: 'Carolina Royal Ravens', years: '2025-2026' },
+            { name: 'Vancouver Surge', years: '2026-'}
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Craze'
     },
@@ -273,7 +275,7 @@ export const players: Player[] = [
             { name: 'Los Angeles Guerrillas', years: '2023-2024'},
             { name: 'Minnesota ROKKR', years: '2024-2025'},
             { name: 'G2 Minnesota', years: '2025-2026' },
-            { name: 'Paris Gentlemates', years: '2026s-' }
+            { name: 'Paris Gentlemates', years: '2026-' }
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Estreal'
     },
@@ -298,7 +300,8 @@ export const players: Player[] = [
         nationality: 'Mexico',
         role: 'Flex',
         teams: [
-            { name: 'G2 Minnesota', years: '2025-' }
+            { name: 'G2 Minnesota', years: '2025-2026' },
+            { name: 'Vancouver Surge', years: '2026-'}
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Mamba'
     },
@@ -500,7 +503,8 @@ export const players: Player[] = [
             { name: 'Los Angeles Thieves', years: '2021-2023'},
             { name: 'Toronto Ultra', years: '2023-2024'},
             { name: 'Los Angeles Thieves', years: '2024-2025'},
-            { name: 'Paris Gentlemates', years: '2025-' }
+            { name: 'Paris Gentlemates', years: '2025-2026' },
+            { name: 'G2 Minnesota', years: '2026-' }
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Envoy'
     },
@@ -691,7 +695,8 @@ export const players: Player[] = [
             { name: 'Las Vegas Legion', years: '2022-2023'},
             { name: 'Carolina Royal Ravens', years: '2024-2025'},
             { name: 'Las Vegas Falcons', years: '2025-2025'},
-            { name: 'Vancouver Surge', years: '2026-' }
+            { name: 'Vancouver Surge', years: '2026-2026' },
+            { name: 'Boston Breach', years: '2026-'}
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/TJHaLy'
     },
@@ -1155,7 +1160,8 @@ export const players: Player[] = [
             { name: 'Minnesota ROKKR', years: '2021-2022'},
             { name: 'Toronto Ultra', years: '2022-2023'},
             { name: 'Las Vegas Legion', years: '2023-2024'},
-            { name: 'Minnesota ROKKR', years: '2024-2024'}
+            { name: 'Minnesota ROKKR', years: '2024-2024'},
+            { name: 'Carolina Royal Ravens', years: '2026-'}
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Standy'
     },
