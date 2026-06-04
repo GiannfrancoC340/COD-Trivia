@@ -1546,7 +1546,7 @@ export const players: Player[] = [
         nationality: 'Argentina',
         role: 'SMG',
         teams: [
-            { name: 'Miami Heretics', years: '2025-' }
+            { name: 'Miami Heretics', years: '2025-2026' }
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Traixx'
     },
@@ -1662,7 +1662,7 @@ export const players: Player[] = [
             { name: 'New York Subliners', years: '2021-2022'},
             { name: 'Los Angeles Guerrillas', years: '2022-2023'},
             { name: 'Vancouver Surge', years: '2025-2025'},
-            { name: 'Paris Gentlemates', years: '2025-' }
+            { name: 'Paris Gentlemates', years: '2025-2026' }
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Neptune'
     },
@@ -1755,7 +1755,8 @@ export const players: Player[] = [
         teams: [
             { name: 'Carolina Royal Ravens', years: '2023-2024'},
             { name: 'Miami Heretics', years: '2024-2025'},
-            { name: 'Toronto KOI', years: '2025-2026' }
+            { name: 'Toronto KOI', years: '2025-2026' },
+            { name: 'Miami Heretics', years: '2026-'}
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/ReeaL'
     },
@@ -1769,7 +1770,8 @@ export const players: Player[] = [
             { name: 'Los Angeles Guerrillas', years: '2023-2023'},
             { name: 'Los Angeles Thieves', years: '2023-2024'},
             { name: 'Toronto Ultra', years: '2024-2025'},
-            { name: 'Toronto KOI', years: '2025-' }
+            { name: 'Toronto KOI', years: '2025-2026' },
+            { name: 'Paris Gentlemates', years: '2026-'}
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/JoeDeceives'
     },
@@ -1783,7 +1785,8 @@ export const players: Player[] = [
         role: 'SMG',
         teams: [
             { name: 'Toronto Ultra', years: '2025-2025'},
-            { name: 'Vancouver Surge', years: '2025-2026' }
+            { name: 'Vancouver Surge', years: '2025-2026' },
+            { name: 'Toronto KOI', years: '2026-'}
         ],
         wikiUrl: 'https://cod-esports.fandom.com/wiki/Abe'
     },
